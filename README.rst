@@ -42,7 +42,7 @@ Then download the project::
 
     $ git clone git@github.com:Fandekasp/learn_japanese.git
 
-
+*Currently my SDL_image is not loaded by pygame, so I'm trying to debug it :(*
 
 .. _Python: http://python.org
 .. _Pygame: http://www.pygame.org
