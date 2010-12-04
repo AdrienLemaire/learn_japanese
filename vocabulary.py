@@ -1,9 +1,11 @@
+#-*- coding:utf-8 -*-
 '''
 Learn vocabulary
 
 Currently a console program, don't forget to install termcolor
 '''
 
+import os.path
 import random
 from termcolor import colored
 
@@ -30,7 +32,7 @@ vocabulary = {
     "yes": "hai",
     "no": "iie",
     "Japan": "nihon",
-    "Amerika": "america",
+    "America": "amerika",
     "Canada": "kanada",
     "A person from ~": "jin",
     "Japanese person": "nihon-jin",
@@ -92,7 +94,7 @@ vocabulary = {
     "five": "go",
     "six": "roku",
     "seven": "nana",
-    "height": "hachi",
+    "eight": "hachi",
     "nine": "kyuu",
     "ten": "juu",
     "one hundred": "hyaku",
@@ -102,7 +104,7 @@ vocabulary = {
     "five hundred": "go-hyaku",
     "six hundred": "roppyaku",
     "seven hundred": "nana-hyaku",
-    "height hundred": "happyaku",
+    "eight hundred": "happyaku",
     "nine hundred": "kyuu-hyaku",
     "one thousand": "sen",
     "two thousand": "ni-sen",
@@ -111,7 +113,7 @@ vocabulary = {
     "five thousand": "go-sen",
     "six thousand": "roku-sen",
     "seven thousand": "nana-sen",
-    "height thousand": "hasen",
+    "eight thousand": "hassen",
     "nine thousand": "kyuu-sen",
     "ten thousand": "man",
     "one hundred million": "oku",
@@ -140,7 +142,7 @@ vocabulary = {
     "next month": "raigetsu",
     "the month before last": "sensengetsu",
     "the month after next": "saraigetsu",
-    "suffix for month of year": "gatsugatsu",
+    "suffix for month of year": "gatsu",
     "January": "ichi-gatsu",
     "February": "ni-gatsu",
     "March": "san-gatsu",
@@ -165,16 +167,16 @@ vocabulary = {
     "weather": "otenki",
     "park": "kouen",
     "(agreement seeker)": "ne",
-    "I'm leaving!": "itte kimase",
+    "I'm leaving!": "itte kimasu",
     "See you when you get home!": "itterasshai",
     "I'm home!": "tadaima",
-    "Welcome back!": "okaerinasai",
-    "Good night.": "oyasuminasai",
+    "Welcome back!": "okaeri nasai",
+    "Good night.": "oyasumi nasai",
     "I'm sorry.": "sumimasen",
     "Excuse me.": "shitsurei shimasu",
     "goodbye": "sayonara",
     "well then...": "dewa",
-    "See you later": "ja, mata",
+    "See you later": "ja mata",
     "Later!": "mata ne",
     "See ya": "jaa ne",
     "They're chopsticks": "ohashi desu",
@@ -188,8 +190,8 @@ vocabulary = {
     "that way / so": "sou",
     "It is so / That's so / Yes": "sou desu",
     "Is that so?": "sou desu ka",
-    "Oh, is that so?": "aa, sou desu ka",
-    "Oh, really?": "aa, sou",
+    "Oh, is that so?": "aa sou desu ka",
+    "Oh, really?": "aa sou",
     "what": "nan",
     "what (alternative form)": "nani",
     "what day of the week": "nan-youbi",
@@ -206,7 +208,7 @@ vocabulary = {
     "post office": "yuubinkyoku",
     "train station": "eki",
     "convenience store": "conbini",
-    "police box": "couban",
+    "police box": "kouban",
     "bank": "ginkou",
     "store suffix": "ya",
     "bookstore": "hon-ya",
@@ -251,24 +253,140 @@ vocabulary = {
     "I am John": "watashi wa Jon desu",
     "The name is Suzuki": "namae wa Suzuki desu",
     "Is today Thursday?": "kyou wa mokuyoubi desu ka",
-    "Is March winter?": "san-gatsu wa, fuyu desu ka",
+    "Is March winter?": "san-gatsu wa fuyu desu ka",
     "Am I a cat?": "watashi wa neko desu ka",
     "Are you American?": "anata wa amerika-jin desu ka",
+    "food": "tabemono",
+    "japanese food": "washoku",
+    "western food": "yoshoku",
+    "sushi": "sushi",
+    "unadorned raw fish": "sashimi",
+    "japanese horseradish": "wasabi",
+    "soy sauce": "shouyu",
+    "tempura": "tenpura",
+    "vinegar": "su",
+    "skewered chicken": "yakitori",
+    "chicken": "chikin",
+    "fish": "sakana",
+    "vegetables": "yasai",
+    "potato": "imo",
+    "tomato": "tomato",
+    "lettuce": "retasu",
+    "corrot": "ninjin",
+    "garlic": "ninniku",
+    "green onion": "negi",
+    "onion": "tamanegi",
+    "egg": "tamago",
+    "fruit": "kudamono",
+    "red grape": "pudou",
+    "green grape": "masukanito",
+    "lemon": "remon",
+    "orange": "orengi",
+    "nectarine": "mikan",
+    "asian pear": "nashi",
+    "strawberry": "ichigo",
+    "watermelon": "suika",
+    "fast food": "fasuto fuudo",
+    "ground beef": "hanbaagu",
+    "hamburger": "hanbaagaa",
+    "French fries": "furai poteto",
+    "McDonald's": "makudonarudo",
+    "Mos Burger": "mosubaagaa",
+    "beverage": "nomimono",
+    "milk": "gyuunyuu",
+    "milkshake": "migukusenki",
+    "orange juice": "orenji juusu",
+    "lemonade": "lemonedo",
+    "sake": "sake",
+    "beer": "biiru",
+    "wine": "wain",
+    "morning": "asa",
+    "noon": "hiru",
+    "evening": "ban",
+    "rice": "gohan",
+    "meal": "shokuji",
+    "breakfast": "asagohan",
+    "lunch": "hirugohan",
+    "dinner": "bangohan",
+    "like": "suki",
+    "dislike": "kirai",
+    "love (big like)": "daisuki",
+    "hate (big dislike)": "daikirai",
+    "I like ~": "ga suki desu",
+    "I dislike ~": "ga kirai desu",
+    "number one": "ichiban",
+    "My favorite is ~": "ga ichiban suki desu",
+    "I like hamburgers": "watashi wa hanbaagaa ga suki desu",
+    "Mariko dislikes sushi": "Mariko wa sushi ga kirai desu",
+    "I don't like chiken": "chikin ga suki dewa arimasen",
+    "Don't you like beer?": "biiru ga suki dewa arimasen ka",
+    "I liked Japan": "nihon ga suki deshita",
+    "I hate carrots!": "ninjin ga daikirai desu",
+    "I really like you!": "anata ga daisuki desu",
+    "I like vegetables": "Yasai ga suki desu",
+    "I like carrots the best": "ninjin ga ichiban suki desu",
+    "I like fruits": "kudamono ga suki desu",
+    "I like strawberries the most": "ichigo ga ichiban suki desu",
+    "I dislike vegetables": "yasai ga kirai desu",
+    "I hate onions the worst": "tamanegi ga ichiban kirai desu",
+    "I dislike the winter": "fuyu ga kirai desu",
+    "I hate February the most": "ni-gatsu ga ichiban kirai desu",
 }
 
 
-def question():
-    question = random.choice(vocabulary.keys())
-    answer = raw_input("%s\n\t%s\n%s " % (colored("Question :", "blue"),
-                      question, colored("Answer :", "blue")))
-    if vocabulary[question] == answer:
-        return colored(random.choice(["Yes", "Good", "Perfect", "Congrats"]),
-                       "green")
+def init():
+    """At the first execution, we create a new file, where we'll add the scores
+    for each sentence"""
+    if not os.path.exists("vocabulary.txt"):
+        vocab_file = open("vocabulary.txt", "a")
+        for en_sentence, jp_sentence in vocabulary.iteritems():
+            vocab_file.write("%s|%s|0|0\n" % (en_sentence, jp_sentence))
+        vocab_file.close()
+
+
+def question(vocab):
+    line = random.choice(vocab)
+    question, answer, success, failure = line.split("|")
+    success = int(success)
+    failure = int(failure.replace("\n", ""))
+    guess = raw_input("%s (found:%s, failed:%s)\n\t%s\n%s " %
+                      (colored("Question", "blue"),
+                       colored(success, "green"),
+                       colored(failure, "red"),
+                       question,
+                      colored("Answer :", "blue")))
+    if guess == "x":
+        return
+    elif guess == answer:
+        response = colored(random.choice(["Yes", "Good", "Perfect",
+                                          "Congrats", "いい"]), "green")
+        success += 1
     else:
-        return colored("False, the answer was '%s'" % vocabulary[question],
-                       "red")
+        response = colored("False, the answer was '%s'" %
+                           vocabulary[question], "red")
+        failure += 1
+    line_index = vocab.index(line)
+    vocab.remove(line)
+    vocab.insert(line_index, "%s|%s|%s|%s\n" % (question, answer, success,
+                                                failure))
+    return response
 
 
 if __name__ == "__main__":
+    init()
+    vocab = open("vocabulary.txt").readlines()
     while 1:
-        print "%s\n---\n" % question()
+        answer = question(vocab)
+        if not answer:
+            break
+        else:
+            print answer
+
+    print "%s\nBye !%s\n" % ("~" * 10, "~" * 10)
+
+    try:
+        vocab_file = open("vocabulary.txt", "w+")
+        vocab_file.writelines(vocab)
+        vocab_file.close()
+    except IOError, e:
+        print "Couldn't save the file\n%s" % e
