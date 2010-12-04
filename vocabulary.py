@@ -1,4 +1,11 @@
+'''
+Learn vocabulary
+
+Currently a console program, don't forget to install termcolor
+'''
+
 import random
+from termcolor import colored
 
 
 vocabulary = {
@@ -252,11 +259,15 @@ vocabulary = {
 
 def question():
     question = random.choice(vocabulary.keys())
-    answer = raw_input("Question:\n\t%s\nAnswer: " % question)
+    answer = raw_input("%s\n\t%s\n%s " % (colored("Question :", "blue"),
+                      question, colored("Answer :", "blue")))
     if vocabulary[question] == answer:
-        return random.choice(["Yes", "Good", "Perfect", "Congrats"])
+        return colored(random.choice(["Yes", "Good", "Perfect", "Congrats"]),
+                       "green")
     else:
-        return "False, the answer was '%s'" % vocabulary[question]
+        return colored("False, the answer was '%s'" % vocabulary[question],
+                       "red")
+
 
 if __name__ == "__main__":
     while 1:
