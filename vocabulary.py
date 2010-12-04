@@ -1,3 +1,6 @@
+import random
+
+
 vocabulary = {
     "Good morning": "ohayou gozaimasu",
     "Good afternoon": "konnichi wa",
@@ -245,3 +248,16 @@ vocabulary = {
     "Am I a cat?": "watashi wa neko desu ka",
     "Are you American?": "anata wa amerika-jin desu ka",
 }
+
+
+def question():
+    question = random.choice(vocabulary.keys())
+    answer = raw_input("Question:\n\t%s\nAnswer: " % question)
+    if vocabulary[question] == answer:
+        return random.choice(["Yes", "Good", "Perfect", "Congrats"])
+    else:
+        return "False, the answer was '%s'" % vocabulary[question]
+
+if __name__ == "__main__":
+    while 1:
+        print "%s\n---\n" % question()
