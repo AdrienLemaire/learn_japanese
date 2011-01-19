@@ -1278,16 +1278,18 @@ class Question:
 
     def db_format(self):
         """When saving the data in the txt file"""
+        if self.success - self.failure > 3:
+            return ""
         return "%s|%s|%d|%d\n" % (self.question, self.answer, self.success,
                                   self.failure)
 
     def verify(self, answer):
-        if self.answer == "5":
+        if answer == "5":
             """ If I know the question/answer, don't bother and remove it
             now from the vocabulary"""
             self.success += 5
             return colored("This word will be removed for the next session",
-               "yellow")
+               "yellow", attrs=["bold"])
         elif self.answer == answer:
             self.success += 1
             return colored(random.choice(["Yes", "Good", "Perfect",
@@ -1340,8 +1342,15 @@ class Vocabulary:
 
 
 if __name__ == "__main__":
+    # Welcome message
+    print colored("\n\nWelcome to 'Learn Japanese\n\t- press '5' to remove the"\
+        " question\n\t- press ctrl-C to quit the program\n\n", "magenta",
+        attrs=["bold"])
+    # Vocabulary creation
     my_vocabulary = Vocabulary()
+    # SIGINT Handling
     signal.signal(signal.SIGINT, my_vocabulary.signal_handler)
     while 1:
+        """Start questions"""
         my_vocabulary.ask_question()
 
