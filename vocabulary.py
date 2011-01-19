@@ -7,7 +7,9 @@ Currently a console program, don't forget to install termcolor
 
 import os.path
 import random
+import signal
 from termcolor import colored
+import sys
 
 
 vocabulary = {
@@ -1322,8 +1324,9 @@ class Vocabulary:
             for question in self.questions:
                 vocab_file.write(question.db_format())
             vocab_file.close()
+            return "Data saved"
         except IOError, e:
-            print "Couldn't save the file\n%s" % e
+            return "Couldn't save the file\n%s" % e
 
     def ask_question(self):
         question = random.choice(self.questions)
@@ -1331,10 +1334,14 @@ class Vocabulary:
         answer = raw_input(colored("Answer :", "blue"))
         print question.verify(answer)
 
+    def signal_handler(self, signal, frame):
+        print "\n%s\n%s\nBye !\n%s\n" % (self.update_db(), "~" * 10, "~" * 10)
+        sys.exit(0)
+
 
 if __name__ == "__main__":
     my_vocabulary = Vocabulary()
+    signal.signal(signal.SIGINT, my_vocabulary.signal_handler)
     while 1:
         my_vocabulary.ask_question()
 
-    print "%s\nBye !%s\n" % ("~" * 10, "~" * 10)
