@@ -1195,7 +1195,7 @@ vocabulary = {
     "I have brown hair": "watashiwa kamino kega chairo desu",
     "Mariko is tall": "Marikosanwa sega takai",
     "John is short": "Jonsanwa sega hikui",
-    "My feet hurt": "ishaga itai",
+    "My feet hurt": "ashiga itai",
     "Up until yesterday, my neck hurt": "kinou made kubiga itakatta",
     #"John is American, and his eyes are green": "Jonsanwa amerikajin de mega "\
         #"midoriiro desu",
@@ -1262,79 +1262,79 @@ vocabulary = {
 class Question:
     """Object for a question"""
 
-    def __init__(self, question, answer, success, failure, index):
+    def __init__(self, question, answer, success, failure):
         self.question = question
         self.answer = answer
-        self.success = success
-        self.failure = failure
-        self.index = index
+        self.success = int(success)
+        self.failure = int(failure)
+
+    def __str__(self):
+        """When asking the question"""
+        return "%s (found:%s, failed:%s)\n\t%s" %\
+            (colored("Question", "blue"), colored(self.success, "green"),
+            colored(self.failure, "red"), self.question)
+
+    def db_format(self):
+        """When saving the data in the txt file"""
+        return "%s|%s|%d|%d\n" % (self.question, self.answer, self.success,
+                                  self.failure)
 
     def verify(self, answer):
-        if self.answer == answer:
+        if self.answer == "5":
+            """ If I know the question/answer, don't bother and remove it
+            now from the vocabulary"""
+            self.success += 5
+            return colored("This word will be removed for the next session",
+               "yellow")
+        elif self.answer == answer:
             self.success += 1
+            return colored(random.choice(["Yes", "Good", "Perfect",
+                "Congrats", "いい"]), "green")
         else:
             self.failure += 1
-        self.update_db()
+            return colored("False, the answer was '%s'" % self.answer, "red")
+
+
+class Vocabulary:
+    """Contains all questions"""
+
+    def __init__(self):
+        self.questions = []
+
+        if not os.path.exists("vocabulary.txt"):
+            """At the first execution, we create a new file, where we'll add
+            the scores for each sentence"""
+            vocab_file = open("vocabulary.txt", "a")
+            for en_sentence, jp_sentence in vocabulary.iteritems():
+                vocab_file.write("%s|%s|0|0\n" % (en_sentence, jp_sentence))
+                self.questions.append(Question(en_sentence, jp_sentence, 0, 0))
+            vocab_file.close()
+        else:
+            vocab_file = open("vocabulary.txt", "r").readlines()
+            for line in vocab_file:
+                aa =  line[:-1].split("|")
+                self.questions.append(Question(*line[:-1].split("|")))
 
     def update_db(self):
-        vocab_file = open("vocabulary.txt", "w+")
-        vocab_file.writelines(vocab)
-        vocab_file.close()
+        """When closing the program"""
+        try:
+            vocab_file = open("vocabulary.txt", "w+")
+            for question in self.questions:
+                vocab_file.write(question.db_format())
+            vocab_file.close()
+        except IOError, e:
+            print "Couldn't save the file\n%s" % e
 
-
-def init():
-    """At the first execution, we create a new file, where we'll add the scores
-    for each sentence"""
-    if not os.path.exists("vocabulary.txt"):
-        vocab_file = open("vocabulary.txt", "a")
-        for en_sentence, jp_sentence in vocabulary.iteritems():
-            vocab_file.write("%s|%s|0|0\n" % (en_sentence, jp_sentence))
-        vocab_file.close()
-
-
-def question(vocab):
-    line = random.choice(vocab)
-    question, answer, success, failure = line.split("|")
-    success = int(success)
-    failure = int(failure.replace("\n", ""))
-    guess = raw_input("%s (found:%s, failed:%s)\n\t%s\n%s " %
-                      (colored("Question", "blue"),
-                       colored(success, "green"),
-                       colored(failure, "red"),
-                       question,
-                      colored("Answer :", "blue")))
-    if guess == "x":
-        return
-    elif guess == answer:
-        response = colored(random.choice(["Yes", "Good", "Perfect",
-                                          "Congrats", "いい"]), "green")
-        success += 1
-    else:
-        response = colored("False, the answer was '%s'" %
-                           vocabulary[question], "red")
-        failure += 1
-    line_index = vocab.index(line)
-    vocab.remove(line)
-    vocab.insert(line_index, "%s|%s|%s|%s\n" % (question, answer, success,
-                                                failure))
-    return response
+    def ask_question(self):
+        question = random.choice(self.questions)
+        print question
+        answer = raw_input(colored("Answer :", "blue"))
+        print question.verify(answer)
 
 
 if __name__ == "__main__":
-    init()
-    vocab = open("vocabulary.txt").readlines()
+    my_vocabulary = Vocabulary()
     while 1:
-        answer = question(vocab)
-        if not answer:
-            break
-        else:
-            print answer
+        my_vocabulary.ask_question()
 
     print "%s\nBye !%s\n" % ("~" * 10, "~" * 10)
-
-    try:
-        vocab_file = open("vocabulary.txt", "w+")
-        vocab_file.writelines(vocab)
-        vocab_file.close()
-    except IOError, e:
-        print "Couldn't save the file\n%s" % e
