@@ -203,7 +203,7 @@ vocabulary = {
     "supermarket (abbreviated form)": "suupaa",
     "post office": "yuubinkyoku",
     "train station": "eki",
-    "convenience store": "conbini",
+    "convenience store": "konbini",
     "police box": "kouban",
     "bank": "ginkou",
     "bookstore": "honya",
@@ -394,12 +394,12 @@ vocabulary = {
     "that's my pencil": "sorewa watashino enpitsu desu",
     "is that (over there) your book?": "arewa anatano hon desuka",
     "is this Mariko's pen?": "korewa Marikosanno pen desuka",
-    "mr nozaki was my teacher": "nozakisanwa watashino sensei deshita",
+    "mr Nozaki was my teacher": "Nozakisanwa watashino sensei deshita",
     "miss Suzuki, of sony": "sonyno Suzuki san",
     "oregon, of america": "amerikano oregon",
     "honda of japan": "nihonno honda",
     "a teacher of geography": "chirino sensei",
-    "mr nozaki was my teacher of geography": "nozakisanwa watashino chiri "\
+    "mr Nozaki was my teacher of geography": "Nozakisanwa watashino chiri "\
             "no sensei deshita",
     "male": "otoko",
     "female": "onna",
@@ -408,7 +408,7 @@ vocabulary = {
     "girl": "onnano ko",
     "Mariko is a woman": "Marikosanwa onnano hito desu",
     "Tarou is a boy": "Tarousanwa otokono ko desu",
-    "is mr. nozaki's friend a man or a woman?": "nozakisanno tomodachiwa "\
+    "is mr. Nozaki's friend a man or a woman?": "Nozakisanno tomodachiwa "\
     "otokono hito desuka. onnano hito desuka",
     "math": "suugaku",
     "a teacher of math": "suugakuno sensei",
@@ -532,7 +532,7 @@ vocabulary = {
     "there were cats and birds, etc": "neko ya toriga imashita",
     "Mariko and John are here": "Marikosanto Jon sanga imasu",
     "John went to the convenience store with Mariko": "Jonsanwa Marikosan "\
-        "to conbinini ikimashita",
+        "to konbinini ikimashita",
     "i ate a meal with the teacher": "watashiwa senseito shokujiwo tabemashita",
     "dad / your dad": "otousan",
     "mom / your mom": "okaasan",
@@ -1280,9 +1280,19 @@ class Question:
 
     def __str__(self):
         """When asking the question"""
-        return "%s (found:%s, failed:%s)\n\t%s" %\
-            (colored("Question", "blue"), colored(self.success, "green"),
-            colored(self.failure, "red"), self.question)
+        question = colored("Question", "blue")
+        if self.success or self.failure:
+            # This looks awful, you can do better ...
+            question += "("
+            if self.success:
+                question += "found:%s" % colored(self.success, "green")
+            if self.success and self.failure:
+                question += ", "
+            if self.failure:
+                question += "failed:%s" % colored(self.failure, "red")
+            question += ")"
+        question += '\n\t%s' % self.question
+        return question
 
     def db_format(self):
         """When saving the data in the txt file"""
@@ -1333,8 +1343,9 @@ class Vocabulary:
             vocab_file = open("vocabulary.txt", "r").readlines()
             for line in vocab_file:
                 args = self.verify(*line[:-1].split("|"))
-                print args
                 questions.append(Question(*args))
+            for en_sentence, jp_sentence in vocabulary.iteritems():
+                questions.append(Question(en_sentence, jp_sentence, 0, 0))
         return questions
 
     def update_db(self):
@@ -1371,7 +1382,8 @@ class Vocabulary:
             question = self.inverted_voc[answer]
         else:
             print "a question/answer in the txt file couldn't be find in the"\
-                "dictionary, please delete the txt file"
+                "dictionary, please delete the txt file\n\t%s / %s" % (
+                question, answer)
             return question, answer, success, failure
         self.vocabulary.__delitem__(question)
         try:
