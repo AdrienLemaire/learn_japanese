@@ -1292,6 +1292,7 @@ class Question:
                                   self.failure)
 
     def verify(self, answer):
+        """Verify if the answer is correct"""
         if answer == "5":
             """ If I know the question/answer, don't bother and remove it
             now from the vocabulary"""
@@ -1311,21 +1312,30 @@ class Vocabulary:
     """Contains all questions"""
 
     def __init__(self):
-        self.questions = []
+        self.vocabulary = vocabulary
+        self.inverted_voc = self.swap_dictionary(vocabulary)
+        self.questions = self.set_questions()
 
+    def swap_dictionary(self, original_dict):
+        return dict([(v, k) for (k, v) in original_dict.iteritems()])
+
+    def set_questions(self):
+        questions = []
         if not os.path.exists("vocabulary.txt"):
             """At the first execution, we create a new file, where we'll add
             the scores for each sentence"""
             vocab_file = open("vocabulary.txt", "a")
             for en_sentence, jp_sentence in vocabulary.iteritems():
                 vocab_file.write("%s|%s|0|0\n" % (en_sentence, jp_sentence))
-                self.questions.append(Question(en_sentence, jp_sentence, 0, 0))
+                questions.append(Question(en_sentence, jp_sentence, 0, 0))
             vocab_file.close()
         else:
             vocab_file = open("vocabulary.txt", "r").readlines()
             for line in vocab_file:
-                aa =  line[:-1].split("|")
-                self.questions.append(Question(*line[:-1].split("|")))
+                args = self.verify(*line[:-1].split("|"))
+                print args
+                questions.append(Question(*args))
+        return questions
 
     def update_db(self):
         """When closing the program"""
@@ -1339,14 +1349,36 @@ class Vocabulary:
             return "Couldn't save the file\n%s" % e
 
     def ask_question(self):
+        """ print the question, ask for the answer, and print the
+        verification"""
         question = random.choice(self.questions)
         print question
         answer = raw_input(colored("Answer :", "blue"))
         print question.verify(answer)
 
     def signal_handler(self, signal, frame):
+        """Save the data in the file before exiting the program"""
         print "\n%s\n%s\nBye !\n%s\n" % (self.update_db(), "~" * 10, "~" * 10)
         sys.exit(0)
+
+    def verify(self, question, answer, success, failure):
+        """Verify if the question is in the dictionary and hasn't been
+        modified"""
+        # First, is the key present in the dictionary?
+        if self.vocabulary.__contains__(question):
+            answer = self.vocabulary[question]
+        elif self.inverted_voc.__contains__(answer):
+            question = self.inverted_voc[answer]
+        else:
+            print "a question/answer in the txt file couldn't be find in the"\
+                "dictionary, please delete the txt file"
+            return question, answer, success, failure
+        self.vocabulary.__delitem__(question)
+        try:
+            self.inverted_voc.__delitem__(answer)
+        except KeyError, e:
+            return "\nDuplication of key '%s' in the dictionary\n" % answer
+        return question, answer, success, failure
 
 
 if __name__ == "__main__":
