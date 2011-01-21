@@ -395,7 +395,7 @@ vocabulary = {
     "is that (over there) your book?": "arewa anatano hon desuka",
     "is this Mariko's pen?": "korewa Marikosanno pen desuka",
     "mr Nozaki was my teacher": "Nozakisanwa watashino sensei deshita",
-    "miss Suzuki, of sony": "sonyno Suzuki san",
+    "miss Suzuki, of sony": "sonyno Suzukisan",
     "oregon, of america": "amerikano oregon",
     "honda of japan": "nihonno honda",
     "a teacher of geography": "chirino sensei",
@@ -527,10 +527,10 @@ vocabulary = {
     "and / with": "to",
     "and, etc. / store suffix": "ya",
     "there are rocks, trees and rivers": "ishito kito kawaga arimasu",
-    "there are rocks, trees, rivers and things like that": "ishi ya ki ya"\
+    "there are rocks, trees, rivers and things like that": "ishiya kiya"\
         " kawaga arimasu",
-    "there were cats and birds, etc": "neko ya toriga imashita",
-    "Mariko and John are here": "Marikosanto Jon sanga imasu",
+    "there were cats and birds, etc": "nekoya toriga imashita",
+    "Mariko and John are here": "Marikosanto Jonsanga imasu",
     "John went to the convenience store with Mariko": "Jonsanwa Marikosan "\
         "to konbinini ikimashita",
     "i ate a meal with the teacher": "watashiwa senseito shokujiwo tabemashita",
@@ -653,7 +653,7 @@ vocabulary = {
     "Mariko has money.": "Marikosanwa okanega arimasu",
     "John, do you like the city?": "Jonsan tokaiga suki desuka",
     "yeah, i like it. i love coffee shops and karaoke.": "ee suki desuyo. "\
-        "kissaten ya karaokega daisuki desu",
+        "kissatenya karaokega daisuki desu",
     "do you like art?": "bijutsuga suki desuka",
     "yeah, i like it.": "un suki desuyo",
     "shall we go to an art gallery or museum?": "bijutsukan ka hakubutsukan "\
@@ -768,8 +768,8 @@ vocabulary = {
     "who is there?": "darega imasuka",
     "who ate my ice cream?": "darega watashino aisukuri-muwo tabemashitaka",
     "ice cream": "aisukuri-mu",
-    "Mariko went": "Mariko sanga ikimashita",
-    "John is there": "Jon sanga imasu",
+    "Mariko went": "Marikosanga ikimashita",
+    "John is there": "Jonsanga imasu",
     "i ate it": "watashiga tabemashita",
     "i (do/did/am/etc)": "watashiga",
     "Mariko (does/did/is/etc)": "Marikosanga",
@@ -1029,7 +1029,7 @@ vocabulary = {
     "Hanako is an orange cat": "Hanako chanwa orenjiirono neko desu",
     "good (skilled)": "jouzu",
     "bad (unskilled)": "heta",
-    "strange / weird": "hen",
+    "strange / weird (2)": "hen",
     "clean / pretty": "kirei",
     "simple": "kantan",
     "likeable / like": "suki",
@@ -1104,8 +1104,8 @@ vocabulary = {
     "tasty / delicious": "oishii",
     "This is delicious cooking, isn't it?": "korewa oishii ryori desune",
     "This beer is disgusting": "kono biiruwa mazui",
-    "The woman over there is beautiful": "osokono onnano hitowa utsukushii",
-    "There is an ugly house over there.": "osokoni minikui iega arimasu",
+    "The woman over there is beautiful": "asokono onnano hitowa utsukushii",
+    "There is an ugly house over there.": "asokoni minikui iega arimasu",
     "John's radio is noisy. I don't like it.": "Jonsanno rajiowa urusai. "
         "suki dewa nai",
     "happy": "ureshii",
@@ -1131,7 +1131,7 @@ vocabulary = {
     "Yes, I do (like it). Was it expensive?": "suki desuyo. takakatta desuka",
     "No, it was cheap. But it should be good": "iie yasukatta. demo oishii deshou",
     "This fish is big, isn't it! You cooked this? (to John)": "kono sakanawa ookii "\
-        "desune. kore Jon sanga ryori shimashitaka",
+        "desune. kore Jonsanga ryori shimashitaka",
     "That's right": "sou desuyo",
     "You're talented, aren't you? It's delicious!": "jouzu desune. oishii",
     "Oh, I'm happy (to hear that). Eat lots!": "aa ureshii. ippai tabete kudasai",
@@ -1296,17 +1296,19 @@ class Question:
 
     def db_format(self):
         """When saving the data in the txt file"""
+        text = ""
         if self.success - self.failure > 3:
-            return ""
-        return "%s|%s|%d|%d\n" % (self.question, self.answer, self.success,
+            text += "#"
+        text += "%s|%s|%d|%d\n" % (self.question, self.answer, self.success,
                                   self.failure)
+        return text
 
     def verify(self, answer):
         """Verify if the answer is correct"""
-        if answer == "5":
+        if answer == "#":
             """ If I know the question/answer, don't bother and remove it
             now from the vocabulary"""
-            self.success += 5
+            self.question = "#%s" % question
             return colored("This word will be removed for the next session",
                "yellow", attrs=["bold"])
         elif self.answer == answer:
@@ -1362,7 +1364,11 @@ class Vocabulary:
     def ask_question(self):
         """ print the question, ask for the answer, and print the
         verification"""
-        question = random.choice(self.questions)
+        question = ""
+        while True:
+            question = random.choice(self.questions)
+            if not question.question.startswith("#"):
+                break
         print question
         answer = raw_input(colored("Answer :", "blue"))
         print question.verify(answer)
