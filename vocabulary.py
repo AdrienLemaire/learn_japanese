@@ -1308,7 +1308,7 @@ class Question:
         if answer == "#":
             """ If I know the question/answer, don't bother and remove it
             now from the vocabulary"""
-            self.question = "#%s" % question
+            self.question = "#%s" % self.question
             return colored("This word will be removed for the next session",
                "yellow", attrs=["bold"])
         elif self.answer == answer:
@@ -1368,6 +1368,7 @@ class Vocabulary:
         while True:
             question = random.choice(self.questions)
             if not question.question.startswith("#"):
+                # if the question doesn't start with #, it's fine
                 break
         print question
         answer = raw_input(colored("Answer :", "blue"))
@@ -1384,6 +1385,8 @@ class Vocabulary:
         # First, is the key present in the dictionary?
         if self.vocabulary.__contains__(question):
             answer = self.vocabulary[question]
+        elif self.vocabulary.__contains__(question[1:]):
+            pass
         elif self.inverted_voc.__contains__(answer):
             question = self.inverted_voc[answer]
         else:
@@ -1391,7 +1394,11 @@ class Vocabulary:
                 "dictionary, please delete the txt file\n\t%s / %s" % (
                 question, answer)
             return question, answer, success, failure
-        self.vocabulary.__delitem__(question)
+        try:
+            self.vocabulary.__delitem__(question)
+        except:
+            self.vocabulary.__delitem__(question[1:])
+
         try:
             self.inverted_voc.__delitem__(answer)
         except KeyError, e:
@@ -1401,7 +1408,7 @@ class Vocabulary:
 
 if __name__ == "__main__":
     # Welcome message
-    print colored("\n\nWelcome to 'Learn Japanese\n\t- press '5' to remove the"\
+    print colored("\n\nWelcome to 'Learn Japanese\n\t- press '#' to remove the"\
         " question\n\t- press ctrl-C to quit the program\n\n", "magenta",
         attrs=["bold"])
     # Vocabulary creation
