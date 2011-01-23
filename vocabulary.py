@@ -705,7 +705,7 @@ vocabulary = {
     "stand (*2)": "tachimasu tatte",
     "sit (*2)": "suwarimasu suwatte",
     "understand (*2)": "wakarimasu wakatte",
-    "i talk with Mariko every day": "mainichi Marikosan to hanashimasu",
+    "i talk with Mariko every day": "mainichi Marikosanto hanashimasu",
     "i talked with John last week": "senshuu Jonsanto hanashimashita",
     "please talk to ms. Suzuki tomorrow": "ashita Suzukisanto hanashite kudasai",
     "i asked to the teacher": "senseini kikimashita",
@@ -1272,11 +1272,15 @@ vocabulary = {
 class Question:
     """Object for a question"""
 
+    questions_failed = []
+
     def __init__(self, question, answer, success, failure):
         self.question = question
         self.answer = answer
         self.success = int(success)
         self.failure = int(failure)
+        if self.failure - self.success > 0:
+            self.__class__.questions_failed.append(self)
 
     def __str__(self):
         """When asking the question"""
@@ -1293,6 +1297,18 @@ class Question:
             question += ")"
         question += '\n\t%s' % self.question
         return question
+
+    #def __setattr__(self, key, typ=None):
+        #"""Override the __setitem__ to do some routines"""
+        #import ipdb; ipdb.set_trace()
+        #if key == "failure" and key - self.success > 0:
+            #self.__class__.questions_failed.append(self)
+
+    @classmethod
+    def __stats__(self):
+        """Class function to get some stats on its instances"""
+        print "There are %s questions you didn't answer correctly" %\
+            len(self.questions_failed)
 
     def db_format(self):
         """When saving the data in the txt file"""
@@ -1317,6 +1333,8 @@ class Question:
                 "Congrats", "いい"]), "green")
         else:
             self.failure += 1
+            #if self.failure - self.success > 0:
+                #self.__class__.questions_failed.append(self)
             return colored("False, the answer was '%s'" % self.answer, "red")
 
 
@@ -1413,6 +1431,7 @@ if __name__ == "__main__":
         attrs=["bold"])
     # Vocabulary creation
     my_vocabulary = Vocabulary()
+    Question.__stats__()
     # SIGINT Handling
     signal.signal(signal.SIGINT, my_vocabulary.signal_handler)
     while 1:
