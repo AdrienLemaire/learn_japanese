@@ -1404,15 +1404,14 @@ class Vocabulary:
 
     def verify(self, question, answer, success, failure):
         """Verify if the question is in the dictionary and hasn't been
-        modified"""
-        # TODO This function is just awful, can do better !
+        modified. Otherwise, we update the sentences in the txt file"""
         # First, is the key present in the dictionary?
-        if self.vocabulary.__contains__(question):
+        if question in self.vocabulary:
             answer = self.vocabulary[question]
-        elif self.vocabulary.__contains__(question[1:]):
+        if question[1:] in self.vocabulary:
             # if the question is commented
             pass
-        elif self.inverted_voc.__contains__(answer):
+        elif answer in self.inverted_voc:
             # in the case I modified to key in the dictionary
             question = self.inverted_voc[answer]
         else:
@@ -1422,12 +1421,12 @@ class Vocabulary:
                 question, answer)
             return question, answer, success, failure
         try:
-            self.vocabulary.__delitem__(question)
+            del self.vocabulary[question]
         except:
-            self.vocabulary.__delitem__(question[1:])
+            del self.vocabulary[question[1:]]
 
         try:
-            self.inverted_voc.__delitem__(answer)
+            del self.inverted_voc[answer]
         except KeyError, e:
             return "\nDuplication of key '%s' in the dictionary\n" % answer
         return question, answer, success, failure
