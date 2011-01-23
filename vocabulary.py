@@ -11,6 +11,7 @@ import signal
 from termcolor import colored
 import sys
 
+L_PREFIX = ["watashiwa ", "anatawa ", ""]
 
 vocabulary = {
     "Good morning": "ohayou gozaimasu",
@@ -672,7 +673,7 @@ vocabulary = {
     "i like sports.": "supoutsuga suki desu",
     "John likes tennis": "Jonsanwa tenisuga suki desu",
     "top / above": "ue",
-    "bottom / below / shita": "shita",
+    "bottom / below / tongue": "shita",
     "right": "migi",
     "left": "hidari",
     "-side": "gawa",
@@ -814,7 +815,7 @@ vocabulary = {
     "how many people are there?": "nannin imasuka",
     "how many students are there?": "seitoga nannin imasuka",
     "how many students are there at the school?": "gakkouni seitoga nannin "\
-        "imasu ka?",
+        "imasuka",
     "how many sheets?": "nanmai",
     "paper": "kami",
     "postal stamp": "kitte",
@@ -989,7 +990,7 @@ vocabulary = {
         "kono misewa goji made desu",
     "Then we have time, don't we?": "ja jikanga arimasune",
     "time": "jikan",
-    "But...": "demo",
+    "But...(1)": "demo",
     "However...": "shikashi",
     "...but": "ga",
     "...but (2)": "keredomo",
@@ -1026,7 +1027,7 @@ vocabulary = {
     "It's a purple dish": "murasakino sara desu",
     "I like green pencils": "midorino enpitsuga suki desu",
     "I saw a brown car": "chairono kurumawo mimashita",
-    "Hanako is an orange cat": "Hanako chanwa orenjiirono neko desu",
+    "Hanako is an orange cat": "Hanakochanwa orenjiirono neko desu",
     "good (skilled)": "jouzu",
     "bad (unskilled)": "heta",
     "strange / weird (2)": "hen",
@@ -1128,7 +1129,7 @@ vocabulary = {
     "I'm going to cook tonight": "konban watashiwa ryori shimasu",
     "Wow! What are you going to cook?": "sugoi. naniwo ryori shimasuka",
     "Fish. Do you like (that)?": "sakana. suki desuka",
-    "Yes, I do (like it). Was it expensive?": "suki desuyo. takakatta desuka",
+    "I do (like it). Was it expensive?": "suki desuyo. takakatta desuka",
     "No, it was cheap. But it should be good": "iie yasukatta. demo oishii deshou",
     "This fish is big, isn't it! You cooked this? (to John)": "kono sakanawa ookii "\
         "desune. kore Jonsanga ryori shimashitaka",
@@ -1276,6 +1277,7 @@ class Question(object):
     total_questions = 0
     total_commented = 0
     total_unanswered = 0
+    total_success = 0
 
     def __init__(self, question, answer, success, failure):
         self.question = question
@@ -1299,17 +1301,20 @@ class Question(object):
     def __setattr__(self, key, value):
         """Override the __setitem__ to do some routines"""
         object.__setattr__(self, key, value)
-        if key == "failure" and value - self.success > 0:
+        if key == "question" and value.startswith("#"):
+            self.__class__.total_commented += 1
+        elif key == "failure" and value - self.success > 0:
             self.__class__.questions_failed.append(self)
+        elif key == "failure" and self.success - value > 0:
+            self.__class__.total_success +=1
         elif key == "failure" and value == 0 and self.success == 0:
             self.__class__.total_unanswered += 1
-        elif key == "question" and value.startswith("#"):
-            self.__class__.total_commented += 1
 
     @classmethod
     def __stats__(self):
         """Class function to get some stats on its instances"""
         return " - %s bad answers\n" % len(self.questions_failed) +\
+               " - %s correct answers\n" % self.total_success +\
                " - %s archived questions\n" % self.total_commented +\
                " - %s unanswered questions\n" % self.total_unanswered +\
                " - %s total question\n\n" % self.total_questions
@@ -1330,9 +1335,10 @@ class Question(object):
             """ If I know the question/answer, don't bother and remove it
             now from the vocabulary"""
             self.question = "#%s" % self.question
-            return colored("This word will be removed for the next session",
-               "yellow", attrs=["bold"])
-        elif self.answer == answer:
+            return colored("The sentence '%s' will be removed for the next "\
+                "session" % self.answer, "yellow", attrs=["bold"])
+        elif self.answer in ["%s%s" % (prefix, answer) for prefix in L_PREFIX]:
+            """Allow to validate a sentence if the prefix is not mandatory"""
             self.success += 1
             return colored(random.choice(["Yes", "Good", "Perfect",
                 "Congrats", "いい"]), "green")
