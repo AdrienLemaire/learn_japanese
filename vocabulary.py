@@ -531,8 +531,8 @@ vocabulary = {
         " kawaga arimasu",
     "there were cats and birds, etc": "nekoya toriga imashita",
     "Mariko and John are here": "Marikosanto Jonsanga imasu",
-    "John went to the convenience store with Mariko": "Jonsanwa Marikosan "\
-        "to konbinini ikimashita",
+    "John went to the convenience store with Mariko": "Jonsanwa Marikosanto "\
+        "konbinini ikimashita",
     "i ate a meal with the teacher": "watashiwa senseito shokujiwo tabemashita",
     "dad / your dad": "otousan",
     "mom / your mom": "okaasan",
@@ -568,7 +568,7 @@ vocabulary = {
     "i like my big brother": "aniga suki desu",
     "what is your dad's name?": "otousanwa onamaewa nan desuka",
     "will your mom come here today?": "kyou okaasanwa kokoni kimasuka",
-    "did your little brother go to school yesterday": "ototousanwa kinou "
+    "did your little brother go to school yesterday": "otoutosanwa kinou "
         "gakkouni ikimashitaka",
     "where is your big sister?": "oneesanwa dokoni imasuka",
     "does your husband like sushi?": "goshujinwa sushiga suki desuka",
@@ -626,9 +626,9 @@ vocabulary = {
     "coffee": "kouhii",
     "Mariko, what are your interests?": "Marikosan kyoumiwa nan desuka",
     "in the summer, i like hiking. in the fall, i go on walks every day. I "\
-            "like the countryside. how about you? what are your hobbies?":\
+            "like the countryside. What are your hobbies?":\
             "natsuwa haikinguga suki desu. akiwa mainichi sanponi "\
-            "ikimasu. inakaga suki desu. anatawa shumiwa nan desuka",
+            "ikimasu. inakaga suki desu. shumiwa nan desuka",
     "i like moutain climbing. i go every week.": "yamano boriga suki desu. "\
         "maishuu ikimasu",
     "the city": "tokai",
@@ -680,7 +680,7 @@ vocabulary = {
     "the left side": "hidarigawa",
     "middle / inside": "naka",
     "front / before": "soto",
-    "back": "ushiro",
+    "back (behind you)": "ushiro",
     "after": "ato",
     "the top of the refrigerator": "reizoukono ue",
     "the inside of the car": "kurumano naka",
@@ -970,7 +970,7 @@ vocabulary = {
     "It's 2500 yen": "nisengohyakuen desu",
     "Mariko, look at this": "Marikosan korewo mite",
     "What is it?": "nan desuka",
-    "It's a plate. I wonder if I should buy it": "sara desu. kaimashou kane",
+    "It's a plate. I wonder if I should buy it": "sara desu. kaimashoukane",
     "How much is it?": "ikura desuka",
     "Um... It's 3000 yen": "eeto sanzenen desu",
     "This one is 2000 yen": "korewa nisenen desuyo",
@@ -1171,7 +1171,7 @@ vocabulary = {
     "toe": "ashino yubi",
     "hair": "ke",
     "head-hair": "kamino ke",
-    "back": "senaka",
+    "back (body)": "senaka",
     "stature": "se",
     "painful": "itai",
     "charming": "suteki",
@@ -1269,18 +1269,20 @@ vocabulary = {
 }
 
 
-class Question:
+class Question(object):
     """Object for a question"""
 
     questions_failed = []
+    total_questions = 0
+    total_commented = 0
+    total_unanswered = 0
 
     def __init__(self, question, answer, success, failure):
         self.question = question
         self.answer = answer
         self.success = int(success)
         self.failure = int(failure)
-        if self.failure - self.success > 0:
-            self.__class__.questions_failed.append(self)
+        self.__class__.total_questions += 1
 
     def __str__(self):
         """When asking the question"""
@@ -1298,18 +1300,25 @@ class Question:
         question += '\n\t%s' % self.question
         return question
 
-    #def __setattr__(self, key, typ=None):
-        #"""Override the __setitem__ to do some routines"""
-        #import ipdb; ipdb.set_trace()
-        #if key == "failure" and key - self.success > 0:
-            #self.__class__.questions_failed.append(self)
+    def __setattr__(self, key, value):
+        """Override the __setitem__ to do some routines"""
+        object.__setattr__(self, key, value)
+        if key == "failure" and value - self.success > 0:
+            self.__class__.questions_failed.append(self)
+        elif key == "failure" and value == 0 and self.success == 0:
+            self.__class__.total_unanswered += 1
+        elif key == "question" and value.startswith("#"):
+            self.__class__.total_commented += 1
 
     @classmethod
     def __stats__(self):
         """Class function to get some stats on its instances"""
-        print "There are %s questions you didn't answer correctly" %\
-            len(self.questions_failed)
+        return " - %s bad answers\n" % len(self.questions_failed) +\
+               " - %s archived questions\n" % self.total_commented +\
+               " - %s unanswered questions\n" % self.total_unanswered +\
+               " - %s total question\n\n" % self.total_questions
 
+    @property
     def db_format(self):
         """When saving the data in the txt file"""
         text = ""
@@ -1373,7 +1382,7 @@ class Vocabulary:
         try:
             vocab_file = open("vocabulary.txt", "w+")
             for question in self.questions:
-                vocab_file.write(question.db_format())
+                vocab_file.write(question.db_format)
             vocab_file.close()
             return "Data saved"
         except IOError, e:
@@ -1400,14 +1409,18 @@ class Vocabulary:
     def verify(self, question, answer, success, failure):
         """Verify if the question is in the dictionary and hasn't been
         modified"""
+        # TODO This function is just awful, can do better !
         # First, is the key present in the dictionary?
         if self.vocabulary.__contains__(question):
             answer = self.vocabulary[question]
         elif self.vocabulary.__contains__(question[1:]):
+            # if the question is commented
             pass
         elif self.inverted_voc.__contains__(answer):
+            # in the case I modified to key in the dictionary
             question = self.inverted_voc[answer]
         else:
+            # if I modified both key and value in the dictionary
             print "a question/answer in the txt file couldn't be find in the"\
                 "dictionary, please delete the txt file\n\t%s / %s" % (
                 question, answer)
@@ -1431,7 +1444,7 @@ if __name__ == "__main__":
         attrs=["bold"])
     # Vocabulary creation
     my_vocabulary = Vocabulary()
-    Question.__stats__()
+    print Question.__stats__()
     # SIGINT Handling
     signal.signal(signal.SIGINT, my_vocabulary.signal_handler)
     while 1:
