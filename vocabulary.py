@@ -1285,20 +1285,16 @@ class Question(object):
         self.__class__.total_questions += 1
 
     def __str__(self):
-        """When asking the question"""
         question = colored("Question", "blue")
-        if self.success or self.failure:
-            # This looks awful, you can do better ...
-            question += "("
-            if self.success:
-                question += "found:%s" % colored(self.success, "green")
-            if self.success and self.failure:
-                question += ", "
-            if self.failure:
-                question += "failed:%s" % colored(self.failure, "red")
-            question += ")"
-        question += '\n\t%s' % self.question
-        return question
+        infos = []
+        if self.success:
+            infos.append("found:%s" % colored(self.success, "green"))
+        if self.failure:
+            infos.append("failed:%s" % colored(self.failure, "red"))
+        if infos:
+            question += " (%s)" % ', '.join(infos)
+        return "%s\n\t%s" % (question, self.question)
+
 
     def __setattr__(self, key, value):
         """Override the __setitem__ to do some routines"""
