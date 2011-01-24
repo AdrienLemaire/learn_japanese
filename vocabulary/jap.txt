@@ -161,7 +161,7 @@ motorized cycle|baiku
 cloud|kumo
 red|akai
 the week after next week|saraishuu
-how did you read that book?|dou yatte sono hon yomimashitaka
+how did you read that book?|douyatte sono hon yomimashitaka
 that kind of x|sonna
 good (ancient form)|yoi
 i don't understand japanese|nihongoga wakarimasen
@@ -190,7 +190,7 @@ door|doa
 i like that kind of apple|sonna ringoga suki desu
 five minutes|gofun
 one minute|ippun
-how did you know?|dou yatte wakarimashitaka
+how did you know?|douyatte wakarimashitaka
 i like strawberries the most|ichigoga ichiban suki desu
 futon|futon
 glass|garasu
@@ -727,7 +727,7 @@ orange juice|orenji juusu
 restaurant|resutoran
 December 20th|juunigatsu hatsuka
 he / boyfriend|kare
-how did you buy that book?|dou yatte sono honwo kaimashitaka
+how did you buy that book?|douyatte sono honwo kaimashitaka
 strange / weird (2)|hen
 (diminuitive name suffix)|chan
 where is the restaurant?|resutoranwa doko desuka
@@ -1157,7 +1157,7 @@ It's 2500 yen|nisengohyakuen desu
 bread store (bakery)|panya
 time|jikan
 how many pens are there?|penga nanbon arimasuka
-I went to school at 8:20|hachini nijuppunni gakkouni ikimashita
+I went to school at 8:20|hachiji nijuppunni gakkouni ikimashita
 welcome to|e youkoso
 Oh, what time is it now?|a ima nanji desuka
 suffix for month of year|gatsu

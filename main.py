@@ -15,7 +15,7 @@ import sys
 L_PREFIX = ["watashiwa ", "anatawa ", ""]
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 LANG_DIR = os.path.join(PROJECT_ROOT, "vocabulary")
-USER_DIR =  os.path.join(PROJECT_ROOT, "user_files")
+USER_DIR = os.path.join(PROJECT_ROOT, "user_files")
 
 
 class Question(object):
@@ -45,18 +45,18 @@ class Question(object):
             question += " (%s)" % ', '.join(infos)
         return "%s\n\t%s" % (question, self.question)
 
-
     def __setattr__(self, key, value):
         """Override the __setitem__ to do some routines"""
         object.__setattr__(self, key, value)
-        if key == "question" and value.startswith("#"):
-            self.__class__.total_commented += 1
-        elif key == "failure" and value - self.success > 0:
-            self.__class__.questions_failed.append(self)
-        elif key == "failure" and self.success - value > 0:
-            self.__class__.total_success +=1
-        elif key == "failure" and value == 0 and self.success == 0:
-            self.__class__.total_unanswered += 1
+        if key == "failure":
+            if self.question.startswith("#"):       # commented question
+                self.__class__.total_commented += 1
+            elif value - self.success > 0:          # question failed
+                self.__class__.questions_failed.append(self)
+            elif self.success - value > 0:          # question succeed
+                self.__class__.total_success += 1
+            elif value == 0 and self.success == 0:  # question unanswered
+                self.__class__.total_unanswered += 1
 
     @classmethod
     def __stats__(self):
@@ -85,7 +85,8 @@ class Question(object):
             self.question = "#%s" % self.question
             return colored("The sentence '%s' will be removed for the next "\
                 "session" % self.answer, "yellow", attrs=["bold"])
-        elif self.answer in ["%s%s" % (prefix, answer) for prefix in L_PREFIX]:
+        elif self.answer in ["%s%s" % (prefix, answer) for prefix in L_PREFIX]\
+            or answer in ["%s%s" % (p, self.answer) for p in L_PREFIX]:
             """Allow to validate a sentence if the prefix is not mandatory"""
             self.success += 1
             return colored(random.choice(["Yes", "Good", "Perfect",
@@ -98,10 +99,10 @@ class Question(object):
 class Vocabulary:
     """Contains all questions"""
 
-    def __init__(self, f_first_vocab):
+    def __init__(self, f__vocab):
         self.vocabulary = dict([line[:-1].split("|") for line
-                                in f_first_vocab.readlines()])
-        self.db_path = os.path.join(USER_DIR, f_first_vocab.name.split("/")[-1])
+                                in f__vocab.readlines()])
+        self.db_path = os.path.join(USER_DIR, f__vocab.name.split("/")[-1])
         self.inverted_voc = self.swap_dictionary(self.vocabulary)
         self.questions = self.set_questions()
 
@@ -191,7 +192,8 @@ class Vocabulary:
 def available_lang(l_files):
     """return the name of the files located in the vocabulary directory"""
     return "\n".join(["\t%d - %s" % (i, lang.rstrip(".txt"))
-                      for i, lang in enumerate(l_files)])
+                      for i, lang in enumerate(l_files, 1)])
+
 
 def get_file_language():
     l_files = listdir(LANG_DIR)
@@ -200,10 +202,10 @@ def get_file_language():
     question = "Choose a language from the list below:\n%s\n=> " % l_langs
     while True:
         answer = raw_input(colored(question, "blue"))
-        if answer in [str(i) for i in range(len(l_files))]:
+        if answer in [str(i) for i in range(1, len(l_files) + 1)]:
             break
     # return file
-    return open(os.path.join(LANG_DIR, l_files[int(answer)]), "r")
+    return open(os.path.join(LANG_DIR, l_files[int(answer) - 1]), "r")
 
 
 if __name__ == "__main__":
@@ -232,4 +234,3 @@ if __name__ == "__main__":
     while 1:
         """Start questions"""
         my_vocabulary.ask_question()
-
