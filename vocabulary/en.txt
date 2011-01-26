@@ -1,2 +1,726 @@
 hello|bonjour
 school|école
+cat|chat
+dog|chien
+his|son
+him|lui
+her|sa
+aim|but
+to be on duty|être disponible
+to be off duty|ne pas être disponible
+to require|éxiger
+to consider doing|envisager de faire
+to go in for|se spécialiser
+in order to do| dans le but de
+achievement|réalisation
+improvement|amélioration
+awkward|gênant
+clumsy|maladroit, lourd
+to get rid of|se débarasser de
+to fail to do|échouer
+to overcome|surmonter
+to provide|fournir
+to run out of|ne plus avoir
+commitment|engagement
+purpose|but
+supply|fourniture, approvisionnement, offre
+to arrange to do|prévoir de faire
+to meet the needs of someone|répondre au besoin de quelqu'un
+gift|don
+greetings|voeux
+threat|menace
+fussy|difficile
+reliable|sûr
+grateful|reconnaissant
+rude|grossier
+to get in touch with|se mettre en rapport
+to disapprove of|être contre
+to congratulate|féciliter
+to apologize|s'excuser
+to get on/to get along with|s'entendre avec
+to rely on|faire confiance
+to annoy|agacer, irriter
+to entertain|distraire
+indeed|en effet
+although|bien que
+among|parmi
+audience|publique
+hence|donc
+involve|impliquer
+depreciassion|ammortissement
+particule to|mouvement
+defendant|accuser
+due to|à cause de
+unless|à moins que
+carry|apporter
+likelihood|probabilité
+flowless|parfaite
+retrofitted|évoluer
+to prevent|empecher
+to shateress|éclater en morceau
+to burst|éclater violemment
+almost|preque
+tell|parler à
+say|parler
+a piece of software|application
+software|logiciel
+crew|équipage
+coach|car
+lorry|camion
+tyre|pneu
+engine|moteur
+to fill up|remplir
+hitch-hiking|auto-stop
+timetable|horraire
+inquiry/enquiry|demande de renseignement
+tip|pourboire
+single|aller
+one-way|aller
+return|aller-retour
+round trip|aller-retour
+to book|reserver
+schoolmate|copain de classe
+headmaster|directeur, proviseur
+reward|récompense
+ink|encre
+mark/grade|note
+tough|difficile
+lecture|conférence, cours
+to graduate from| diplomer de
+to attend a school|faire des études
+to take a subject|choisir une matière
+quotation|citation
+assigement|devoir écrit
+grant|bourse
+failure|échec
+compulsory|obligatoire
+savings|économie
+currency|monnaie
+wealth|richesse
+be weel off| avoir de l'argent
+to owe|devoir
+branch|succursale
+agreement|accord, contrat
+economics| science économique
+share/stock|part action
+forecast|pévision
+to run a firm|diriger une entreprise
+to supply|fournir
+loan|prêt, emprunt
+deal|transaction
+survey|étude
+retirement|retraite
+temp|emploi partiel
+to resign|démissionner
+to retire|partir à la retraite
+application|demande d'emploi
+vacancy|emploi vacant
+union|syndicat
+wage|salaire
+trouble|conflit
+rise/raise|augementation
+to apply for a job|faire une demande d'emploi
+to appoint|nommer
+membership|adhésion
+skilled|qualité
+to fire|mettre à la porte
+warning|avertissement
+struggle|lutte
+injury|blessure
+helmet|casque
+robbery|vol à main armée
+rape|viol
+flood|innondation
+earthquake|tremblement de terre
+unconsious|inconscient
+severe|grave
+to beat up|rouer de coups
+to drown|noyer
+to run down/over|renverser, écraser
+to flow|couler
+safely|en sureté
+fail|prison
+a mood|humeur
+selfishness|égoisme
+bitterness|amertume
+pride|fierté
+guilt|honte
+anger|colère
+row, argument|dispute
+coward|lache
+hint|allusion
+fit|crise
+delighted|ravi
+merry|gai
+ashamed|honteux
+attractive|séduisant
+gentle|doux
+pathetic|navrant
+suspicious|méfiant, suspect
+appaling|épouventable
+bad-tempered|grincheux
+upset|vexé
+dedicated|dévoué
+amazing|stupéfiant
+sadly|tristement
+carefully|soigneuesement
+to welcome|accueillir
+to tolerate/tu put up with| tolérer, supporter
+to bear/to stand|supporter
+a thought|pensée
+awareness|conscience
+a piece of advice|conseil
+a gift|don
+wisdom|sagesse
+a joke|blague
+a fool|imbécile
+a blank|trou de mémoire
+an addiction|dépendance
+a maniac|maniaque
+odd|bizare
+gifted|doué
+accurate|précis
+bored|qui s'ennui
+wise|sage
+weel-read|cultivé
+puzzled|perplexe
+irrelevant|hors de propos
+dull|peu intelligent
+narrow-mind|borne
+insane|fou
+consciously|consciemment
+to indend to|avoir l'intention de
+to focus on|se concentrer sur
+to bore|ennuyer
+to fancy|avoir envie de
+a chore|corvée
+a commuter|banlieusard travaillant en ville
+know-how|savoir faire
+a workaholic|un boureau de travail
+smooth|lisse
+glossy|brillant
+to sweat|transpirer
+to lack|manquer
+accountancy|la comptabilité
+grease|graisse
+check-up|vérification
+clay|argile
+executive|cadre
+a clerical job|un emploi de bureau
+such|tellement
+scenery|paysage
+damage|dégât
+unspoilt|intact
+harmful|nocif
+scarce|rare
+widespread|répandu
+disposable|jetable
+to spoil|abimer
+to throw away|jeter
+to sort|trier
+to ban|interdire
+to cut down on|réduire
+refuse|ordures
+garbage|ordures
+rubbish|ordures
+trash|ordures
+packaging|emballages
+gross/net salary|salaire brut/net
+affordable|abordable
+to be in debt|être endetté
+to cut down on one's expenses|réduire les dépenses
+to splurge|dépenser
+tax evasion|fraude fiscale
+the welfare state|état providence
+a corner shop|magasin de proximité
+a shopping mall|centre commercial
+DIY|magasin de bricolage
+a wide range of items|large variété de produit
+to make a purchase|faire des achats
+to attend a customer|servir un client
+a beggar|mendiant
+to starve|mourrir de faim
+the homeless|sans-abris
+assitance|aide
+unhealthy|insalubre
+illiteracy|analphabétisme
+the bare necessities|nécessaité de base
+unemployement benefits|allocation chômage
+to be job hunting|recherche d'un emploi
+the labour market|marcher du travail
+to hire, to take on|embaucher
+sexual harassement|harcèlement sexuel
+to commit a crime|commettre un crime
+to break the law|enfreindre la loi
+a manslaughter|homicide volontaire
+to hit|frapper
+to punch|donner un coup de poing
+to kick|donner un coup de pied
+ruthless, pitiless|sans pitier
+to slander|diffamer
+arson|incendie criminel
+to set a fire|mettre le feu
+a riot|émeute
+a troublemaker| un fouteur de trouble
+the inner city|ghetto
+shoplifting|vol à l'étalage
+to break into|entrer par effraction
+a plain clothes detctive|detective en civile
+unmarket police car|voiture de police banalisée
+fingerprints|empreintes digitales
+to place under arrest|mettre en état d'arrestation
+to charge somebody with|inculper quelqu'un
+the trial|procès
+to plead|plaider
+to make a confession|passer au aveux
+evidence|preuve
+to setence|infliger une peine
+ro release/to set free|relâcher
+to interfere with|se mêler de
+to hang around|trainer
+to be critical|critiquer
+to blame adults|reprocher au adults
+a family gathering|réunion de famille
+to celebrate|fêter
+to bring together|rassembler
+the gues|inviter
+the host|hôtes
+to join in a conversation|se joindre à une conversation
+talkative|bavard
+to chat with someone|bavarder avec quelqu'un
+laid back|décontracté
+to make fun of|se moquer de
+gossip|commèrages
+considerate|atentionné
+to pay compliment|faire un compliment
+cheerful|joyeux, gais
+human ressource|ressources humaines
+job sharing|partage des emplois
+CEO|PDG
+a team leader|chef d'équipe
+a floor manager|chef de rayon
+a boss|patron
+a new hire|nouvel employé
+one's occupation|profession
+an identification badge|badge d'identité
+an employee handbook|convension
+staff attendance/to be tardy|présence du personnel/être en retard
+an employee expense voucher|note de frais
+voucher|bon, recu
+upsizinz|augmentation
+downsizing|diminution
+a resume|CV
+a cover letter|lettre de motivation
+credentials|référence
+to lay off|licencier
+to stack|mettre à la porte
+a pink slip|formulaire rose
+outplacement|licenciement avec dédomagement
+resignation|demission
+a want ad|offre d'emploi
+to be on strike|être en grève
+training|formation
+plant/factory|usine
+to work in shift|travailler les 3 huits
+a level|niveau
+an assembly line|chaine de montage
+to be suitable|être convenable
+to suit|convenir
+to hamper|entraver
+outsourcing|sous-traitance
+parts|pièce détaché
+to shut down|fermer
+to revamp|restructurer
+supervisor/foreman|contre-maître
+to replace|remplacer
+industry|secteur industriel
+reliable|fiable
+unreliable|peu fiable
+subsidiary|filiale
+merger|fusion
+headquarters|siège social
+warehouse|entrepôt
+real estate|immobilier
+a utility|service publique
+a takeover|OPA
+to move|déménager
+facility|aménagement
+hall/coridor|couloir
+acquisition|achat
+to acquire|acheter
+to own|posseder
+elevator|ascenseur
+the premises|lieu de travail
+memo|note interne
+office chore|taches de bureau
+offices supplies|fourniture de bureau
+stationery|papier lettre
+the letterhead|en-tête
+to file|classer des dossiers
+a thumb tack|punaise
+a stapler|agrafeuse
+a copier|photographieuse
+to sort the mail|trier le courrier
+correction fluid|tip-ex
+pencil|crayon
+pen|stylo
+highlighter|feutre
+an eraser|gomme
+paper clip|trombone
+bulletin board|tableau d'affichage
+lunch break|pause déjeuné
+coffe break|pause café
+petty cash|caisse
+chart|tableau
+graph|graphique
+to be available|être disponible
+to enclose|joindre
+to tidy|ranger
+clutter|pagaille
+a shelf|rayon,étagère
+a tool-free call|numéro vert
+dial tone|tonalité
+a task|tâche
+a schedule|emploi du temps
+business hours|heure de bureau
+a receptionist|standardiste
+a sotage room|dépôt
+a cellular phone|téléphone portable
+a printer|imprimante
+a panel|panneau
+to plug in|brancher
+a quick start guide|manuel d'utilisation rapide
+ill/sick|malade
+a physician|médecin
+health benefits|assurance maladie
+dental coverage|couverture dentaire
+sick day|congé maladie
+lifestyle|mode de vie
+a fitness center|centre de sport
+an account|compte
+accounting|comptabilité
+quarter|trimestre
+electronic funds transfer|virement
+groth|croissance
+decline|déclin
+to slump/fall|baisser
+a bonus|prime
+a figure|chiffre
+turnover|chiffre d'affaire
+a rate|taux
+stockholders|actionnaires
+to cut funding|supprimer les fonds
+to raise money|récolter des fonds
+a loss|perte
+to go bankrupt|faire faillite
+mortgage|hypothèque
+payday|jour de paye
+payroll|livre de paye
+pay slip|fiche de paye
+exepense|dépense
+cost|coût
+fee|tarif
+annual report|rapport annuel
+financial report|rapport financier
+to break even|atteindre le seuil de rentabilité
+a brand|marque
+user-friendly|convivial
+to be eligible|avoir droit
+a goal|objectif
+to switch|changer
+to meet a deadline|respeceter un délai
+a thight deadline|délai
+a target|cible
+specific request|demande précise
+bill/invoice|facture
+customer|client
+profit|benefice
+department|service
+small business|petite entreprise
+market share|part de marché
+fulltime|plein temps
+parttime|mi-temps
+board member|membre du conseil d'admission
+minutes of meetings|compte-rendu de réunion
+an appointment|rendez-vous
+to hold conference|tenir une conférence
+to attend a workshop|assiter à un atelier
+a delay|retard
+attire|vêtement
+an asset|avoirs, actifs
+a fire drill|exercice de sauvetage
+overtime|heure supplémentaire
+a poll/survey|sondage
+general ledger|grand livre des frais
+the management|direction
+telecommuting|travailler de chez soi
+to convene|convoquer
+to cancel|annuler
+to schedule an appointment|fixer une rendez-vous
+to require|exiger
+workload|quantité de travail
+backlog|retard dans son travail
+a sale policy|politique de vente
+an estimate/quotation|devis
+delivery|livraison
+shipping|expédition
+a sample|échantillon
+a warranty/guarantee|garantie
+a sale|solde
+an item|article
+extra|supplémentaire
+an order form|bon de commande
+to place a order|passer une commande
+a receipt|recu
+a retailer|détaillant
+wholesaler|grossiste
+to pay in full|régler toute la facture
+consumer behavior|comportement de consommateur
+aisle|allée
+a display|présentoir
+a refund|remboursement
+commitment|engagement
+a dealer|concessionaire
+a menu|une carte
+all you can eat|à volonté
+an appetizer|entrée
+an entre|plat
+cocktail|apéritif
+waiter|serveur
+waitress|serveuse
+a balanced meal| repas équilibré
+the check|l'addition
+a roll|petit pain
+caterer|traiteur
+tap water|eau du robinet
+sparkling water|eau pétillante
+cashier|caisse
+silverware|couverts
+tablecloth|nappe
+napkin|serviette
+dish|assiette
+cup|tass
+glass|verre
+to order|commander
+knife|couteau
+fork|fourchette
+spoon|cuillère
+luggage|bagages
+direct flight|vol direct
+a connecting flight|vol avec correspondance
+a ski resort|station de ski
+a resort|village de vacance
+a rental car|voiture de location
+high season|haute saison
+off season|basse saison
+a cruise|croisière
+subway|metro
+fare|tarif
+a boarding pass|carte d'embarquement
+to check-in|s'enregistrer
+a train conductor|contrôleur de train
+a flight attendant|hotesse de l'air
+train tracks|rails
+train crossing|passage à niveau
+a night clerk|veilleur de nuit
+traveller's checker|chèque de voyage
+the room rate|prix d'une chambre
+a  performance|représentation
+play|jouer une pièce de théâtre
+a show|spectacle
+tickets|places
+intermission|entracte
+a movie|film
+the opening|sortie d'un film
+a blockbuster|film grand publique
+a review|critique
+director|metteur de scène
+producer|producteur
+script|scénario
+a lead|premier rôle
+a supporting role|deuxième rôle
+an oscar/academic award|césar
+amusement park|park d'attraction
+ride|manège
+fair|foire
+exhibit|exposition
+star|vedette
+novel|roman
+novelist|romancier
+award|prix
+back out|changer d'avis
+back up|reculer
+be bound to|être certain de
+be had|être roulé
+be into|se passionner pour
+be on hand|être à la porté de la main
+be on time|être à l'heure
+be out of date|périmé
+be over|être fini
+be up|être terminé
+be up to date|être à jour
+bow out|ne plus participer
+break down|tomber en panne
+break loos|se détacher
+break off|couper
+break out|éclater
+bring about|provoquer
+bring back|rapporter
+bring up|élever
+bring out|faire paraître
+build up|renforcer
+buy out|acheter la part de
+buy up|faire l'achat total
+call for|venir chercher
+call off|annuler
+call on|visiter
+carry on|continuer
+carry out|executer
+catch on|comprendre
+catch up|rattraper
+clear up|vérifier
+come about|se produire
+come across|trouver par hasard
+come to|se remettre
+come true|se réaliser
+count on|compter sur
+cover for|remplacer
+cover up|dissimuler
+cut in|interrompre
+cut off|couper
+cut out|cesser de
+cut short|couper court
+cut up|couper en morceau
+die down|s'éteindre
+die out|disparaître
+draw up|préparer
+drop in|visiter à l'imprévu
+drop off|déposer
+drop out|quitter
+dry out|sécher
+dry up|dessécher
+fade away|décroitre
+fall behind|être en arrière
+fall off|tomber de
+fall through|échouer
+figure out|calculer
+fill out/fill in|remplir
+get along|s'entendre, progresser
+get along with|s'entendre
+get away|s'échaper
+get away with|s'en tirer
+get back|retourner
+get carried away|se laisser emporter
+get lost|se perdre
+get over|se remettre
+get ride of|se débarasser de
+get through|terminer
+get to|arriverà
+give in|céder
+give off|produire
+give out|distribuer
+give up|abandonner
+go around|suffire à tout le monde
+go in for|s'adonner à
+go on|continuer
+go out|sortir
+go thhrough|subir
+go wrong|marcher mal
+grow out of|passer
+hand in|remettre
+hear from|recevoir des nouvelles
+hear of|entendre parler de
+hold off|retenir
+hold out|s'arrêter
+hold over|continuer à monter
+hold up|arrêter la circulation
+keep on|continuer à
+keep out|défendre d'entrer
+keep track of|enregistrer
+keep up|maintenir
+keep up with|aller aussi vite que
+knock it off|cesser immédiatement
+lay off|mettre au chômage
+let go off|lâcher
+let up|diminuer
+live it up|mener la belle vie
+look after|s'occuper de
+look down on|regarder de haut en bas
+look into|examiner avec soin
+look out|faire attention
+look out on|donner sur
+look over|examiner
+look up|chercher
+look up to|avoir un grand respect pour
+look like|ressembler
+look for|chercher
+make do|se débrouiller
+make good|réussir
+make out|déchiffrer, réussir
+make sure|s'assurer de
+make up|se rattraper, inventer
+pass out|distribuer
+pick out|choisir
+pick up|rammasser
+play up to|flatter
+point out|signaler
+pull off|réussir
+put away|ranger
+put down|déposer
+put off|remettre
+put out|éteindre
+put together|assembler
+put up|construire
+put up with|tolérer
+rule out|éliminer
+run into|rencontrer par hasard
+run over|écraser
+see about|s'occuper de
+sell out|liquider
+set out|se mettre en chemin
+show off|se vanter
+show up|se présenter
+shut off|fermer
+shut up|se taire
+stand for|représenter
+stand out|se distinguer de
+stand up|résister, poser un lapin
+step down|démissioner
+stick around|rester
+stick to|persévérer
+stir up|agiter
+take after|tenir de
+take care of|prendre soin de
+take down|prendre note de
+take hold of|saisir
+take in|voir
+take off|enlever, décoller
+take on|engager
+take out|sortir
+take avoer|se charger de
+take part in|participer à
+take place|avoir lieu
+take up|étudier
+talk back|rétorquer
+talk over|discuter
+tear down|démolir
+tear up|déchirer
+think of|penser à
+think over|réfléchir
+think up|imaginer
+to be better off|valoir mieux
+to be well off|vivre dans l'aisance
+top something|dépasser
+try on, try out|essayer
+turn down|refuser
+turn off|éteindre
+turn on|allumer
+turn out|devenir
+wait for|attendre
+wait on|servir
+wear down|user
+wear off|dissparaitre
+wear out|user
+work out|bien finir
+naughty|vilain
+stack|pile, tas
