@@ -92,7 +92,7 @@ blue|aoi
 exists (inanimate)|arimasu
 what|nan
 short (in length)|mijikai
-tomorrow  the teacher will come to my house|ashita senseiwa watashi no ieni kimasu
+tomorrow  the teacher will come to my house|ashita senseiwa watashino ieni kimasu
 sun|taiyou
 the top of the desk|tsukueno ue
 four thousand|yonsen
@@ -121,7 +121,7 @@ baseball|yakyuu
 sink|nagashidai
 But I don't like sushi|demo sushiga suki dewa arimasen
 teacher|sensei
-mr Nozaki was my teacher of geography|Nozakisanwa watashino chiri no sensei deshita
+mr Nozaki was my teacher of geography|Nozakisanwa watashino chirino sensei deshita
 nine thousand|kyuusen
 vinegar|su
 please go to school|gakkouni itte kudasai
@@ -493,7 +493,7 @@ listen|kikimasu
 the month before last|sensengetsu
 ceiling|tenjou
 It's a black dog|kuroi inu desu
-that way / so|sou
+that way (2)/ so|sou
 that|sore
 That's right|sou desuyo
 season|kisetsu
