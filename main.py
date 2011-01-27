@@ -18,84 +18,6 @@ LANG_DIR = os.path.join(PROJECT_ROOT, "vocabulary")
 USER_DIR = os.path.join(PROJECT_ROOT, "user_files")
 
 
-class Question(object):
-    """Object for a question"""
-
-    questions_failed = []
-    total_questions = 0
-    total_commented = 0
-    total_unanswered = 0
-    total_success = 0
-
-    def __init__(self, question, answer, success, failure):
-        self.question = question
-        self.answer = answer
-        self.success = int(success)
-        self.failure = int(failure)
-        self.__class__.total_questions += 1
-
-    def __str__(self):
-        question = colored("Question", "blue")
-        infos = []
-        if self.success:
-            infos.append("found:%s" % colored(self.success, "green"))
-        if self.failure:
-            infos.append("failed:%s" % colored(self.failure, "red"))
-        if infos:
-            question += " (%s)" % ', '.join(infos)
-        return "%s\n\t%s" % (question, self.question)
-
-    def __setattr__(self, key, value):
-        """Override the __setitem__ to do some routines"""
-        object.__setattr__(self, key, value)
-        if key == "failure":
-            if self.question.startswith("#"):       # commented question
-                self.__class__.total_commented += 1
-            elif value - self.success > 0:          # question failed
-                self.__class__.questions_failed.append(self)
-            elif self.success - value > 0:          # question succeed
-                self.__class__.total_success += 1
-            elif value == 0 and self.success == 0:  # question unanswered
-                self.__class__.total_unanswered += 1
-
-    @classmethod
-    def __stats__(self):
-        """Class function to get some stats on its instances"""
-        return " - %s bad answers\n" % len(self.questions_failed) +\
-               " - %s correct answers\n" % self.total_success +\
-               " - %s archived questions\n" % self.total_commented +\
-               " - %s unanswered questions\n" % self.total_unanswered +\
-               " - %s total question\n\n" % self.total_questions
-
-    @property
-    def db_format(self):
-        """When saving the data in the txt file"""
-        text = ""
-        if self.success - self.failure > 3:
-            text += "#"
-        text += "%s|%s|%d|%d\n" % (self.question, self.answer, self.success,
-                                  self.failure)
-        return text
-
-    def verify(self, answer):
-        """Verify if the answer is correct"""
-        if answer == "#":
-            """ If I know the question/answer, don't bother and remove it
-            now from the vocabulary"""
-            self.question = "#%s" % self.question
-            return colored("The sentence '%s' will be removed for the next "\
-                "session" % self.answer, "yellow", attrs=["bold"])
-        elif self.answer in ["%s%s" % (prefix, answer) for prefix in L_PREFIX]\
-            or answer in ["%s%s" % (p, self.answer) for p in L_PREFIX]:
-            """Allow to validate a sentence if the prefix is not mandatory"""
-            self.success += 1
-            return colored(random.choice(["Yes", "Good", "Perfect",
-                "Congrats", "いい"]), "green")
-        else:
-            self.failure += 1
-            return colored("False, the answer was '%s'" % self.answer, "red")
-
-
 class Vocabulary:
     """Contains all questions"""
 
@@ -187,6 +109,105 @@ class Vocabulary:
         except KeyError, e:
             return "\nDuplication of key '%s' in the dictionary\n" % answer
         return question, answer, success, failure
+
+
+class Question(object):
+    """Object for a question"""
+
+    questions_failed = []
+    total_questions = 0
+    total_commented = 0
+    total_unanswered = 0
+    total_success = 0
+
+    def __init__(self, question, answer, success, failure):
+        self.question = question
+        self.answer = answer
+        self.success = int(success)
+        self.failure = int(failure)
+        self.__class__.total_questions += 1
+        self.congrats = ["Yes", "Good", "Perfect", "Congrats"]
+
+    def __str__(self):
+        question = colored("Question", "blue")
+        infos = []
+        if self.success:
+            infos.append("found:%s" % colored(self.success, "green"))
+        if self.failure:
+            infos.append("failed:%s" % colored(self.failure, "red"))
+        if infos:
+            question += " (%s)" % ', '.join(infos)
+        return "%s\n\t%s" % (question, self.question)
+
+    def __setattr__(self, key, value):
+        """Override the __setitem__ to do some routines"""
+        object.__setattr__(self, key, value)
+        if key == "failure":
+            if self.question.startswith("#"):       # commented question
+                self.__class__.total_commented += 1
+            elif value - self.success > 0:          # question failed
+                self.__class__.questions_failed.append(self)
+            elif self.success - value > 0:          # question succeed
+                self.__class__.total_success += 1
+            elif value == 0 and self.success == 0:  # question unanswered
+                self.__class__.total_unanswered += 1
+
+    @classmethod
+    def __stats__(self):
+        """Class function to get some stats on its instances"""
+        return " - %s bad answers\n" % len(self.questions_failed) +\
+               " - %s correct answers\n" % self.total_success +\
+               " - %s archived questions\n" % self.total_commented +\
+               " - %s unanswered questions\n" % self.total_unanswered +\
+               " - %s total question\n\n" % self.total_questions
+
+    @property
+    def db_format(self):
+        """When saving the data in the txt file"""
+        text = ""
+        if self.success - self.failure > 3:
+            text += "#"
+        text += "%s|%s|%d|%d\n" % (self.question, self.answer, self.success,
+                                  self.failure)
+        return text
+
+    def verify(self, answer):
+        """Verify if the answer is correct"""
+        if answer == "#":
+            """ If I know the question/answer, don't bother and remove it
+            now from the vocabulary"""
+            self.question = "#%s" % self.question
+            return colored("The sentence '%s' will be removed for the next "\
+                "session" % self.answer, "yellow", attrs=["bold"])
+        elif self.answer == answer:
+            self.success += 1
+            return colored(random.choice(self.congrats), "green")
+        else:
+            self.failure += 1
+            return colored("False, the answer was '%s'" % self.answer, "red")
+
+
+class Q_Japanese(Question):
+    """Japanese question with some special verifications"""
+    l_prefix = ["watashiwa ", "anatawa ", ""]
+    l_replace = {
+        "arimasen": "nai",
+    }
+
+    def __init__(self):
+        super(Q_Japanese, self).__init__()
+        self.congrats += ["すごい", "いい", "じょうず", "よかった"]
+
+    def verify(self, answer):
+        if self.answer in ["%s%s" % (prefix, answer) for prefix in L_PREFIX]\
+                or answer in ["%s%s" % (p, self.answer) for p in L_PREFIX]:
+            """Allow to validate a sentence if the prefix is not mandatory"""
+            self.success += 1
+            return colored(random.choice(["Yes", "Good", "Perfect",
+                "Congrats", "いい"]), "green")
+        else:
+            super(Q_Japanese, self).verify(answer)
+
 
 
 def available_lang(l_files):
