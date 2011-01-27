@@ -12,20 +12,31 @@ import signal
 from termcolor import colored
 import sys
 
-L_PREFIX = ["watashiwa ", "anatawa ", ""]
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 LANG_DIR = os.path.join(PROJECT_ROOT, "vocabulary")
 USER_DIR = os.path.join(PROJECT_ROOT, "user_files")
+D_CLASSES = {
+    "en": lambda args: Question(*args),
+    "jap": lambda args: Q_Japanese(*args),
+}
 
 
 class Vocabulary:
     """Contains all questions"""
 
-    def __init__(self, f__vocab):
+    def __init__(self, f_vocab):
         self.vocabulary = dict([line[:-1].split("|") for line
-                                in f__vocab.readlines()])
-        self.db_path = os.path.join(USER_DIR, f__vocab.name.split("/")[-1])
+                                in f_vocab.readlines()])
+        self.db_path = os.path.join(USER_DIR, f_vocab.name.split("/")[-1])
         self.inverted_voc = self.swap_dictionary(self.vocabulary)
+        # from the name of the file, we try to get the name of the class
+        try:
+            self.t_class = D_CLASSES[[key for key in D_CLASSES if key in
+                                      f_vocab.name.split("/")[-1]][0]]
+        except:
+            key = raw_input("What is the class associated?\n%s" %
+                            "".join(["\t%s\n" % key for key in D_CLASSES]))
+            self.t_class = D_CLASSES[key]
         self.questions = self.set_questions()
 
     def swap_dictionary(self, original_dict):
@@ -37,9 +48,9 @@ class Vocabulary:
             """At the first execution, we create a new file, where we'll add
             the scores for each sentence"""
             f_vocabulary = open(self.db_path, "a")
-            for key, value in self.vocabulary:
+            for key, value in self.vocabulary.iteritems():
                 f_vocabulary.write("%s|%s|0|0\n" % (key, value))
-                questions.append(Question(key, value, 0, 0))
+                questions.append(self.t_class((key, value, 0, 0)))
         else:
             """We take the data from the user file"""
             f_vocabulary = open(self.db_path, "r")
@@ -109,6 +120,12 @@ class Vocabulary:
         except KeyError, e:
             return "\nDuplication of key '%s' in the dictionary\n" % answer
         return question, answer, success, failure
+
+    #def __get_type_class(self):
+        #t_class = raw_input(colored("What kind of question should it "
+                  #"use?\n%s" % "".join(["\t%s\n" % aclass for aclass
+                  #in D_CLASSES.keys()]), "yellow"))
+        #return t_class
 
 
 class Question(object):
@@ -194,19 +211,19 @@ class Q_Japanese(Question):
         "arimasen": "nai",
     }
 
-    def __init__(self):
-        super(Q_Japanese, self).__init__()
+    def __init__(self, *args):
+        super(Q_Japanese, self).__init__(*args)
         self.congrats += ["すごい", "いい", "じょうず", "よかった"]
 
     def verify(self, answer):
-        if self.answer in ["%s%s" % (prefix, answer) for prefix in L_PREFIX]\
-                or answer in ["%s%s" % (p, self.answer) for p in L_PREFIX]:
+        if self.answer in ["%s%s" % (prefix, answer) for prefix in self.l_prefix]\
+                or answer in ["%s%s" % (p, self.answer) for p in self.l_prefix]:
             """Allow to validate a sentence if the prefix is not mandatory"""
             self.success += 1
             return colored(random.choice(["Yes", "Good", "Perfect",
                 "Congrats", "いい"]), "green")
         else:
-            super(Q_Japanese, self).verify(answer)
+            return super(Q_Japanese, self).verify(answer)
 
 
 
