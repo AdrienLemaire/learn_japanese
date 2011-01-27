@@ -16,6 +16,8 @@ Make sure that you have a working Python_ 2.x >= 2.6, eg::
 Then download the project::
 
     $ git clone git@github.com:Fandekasp/learn_japanese.git
+    $ cd learn_japanese
+    $ pip install -r requirements.txt
 
 .. _Python: http://python.org
 
