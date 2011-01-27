@@ -257,7 +257,7 @@ how many students are there at the school?|gakkouni seitoga nannin imasuka
 to Mariko's house|Marikosanno ieni
 sunday|nichiyoubi
 the school's teacher|gakkouno sensei
-easy / friendly|yasashii
+easy / friendly / kind|yasashii
 yeah, i like it. i love coffee shops and karaoke.|ee suki desuyo. kissatenya karaokega daisuki desu
 stern|kibishii
 that sounds nice!|ii desune
@@ -1185,3 +1185,54 @@ shall we go?|ikimashouka
 brown|chairo
 won't you see?|mimasenka
 a low cloud|hikui kumo
+japanese clothing|wafuku
+western clothing|youfuku
+shirt|shatsu
+slacks / pants|zubon
+wear (upper body) (*2)|kimasu kite
+wear (lower body) (*2)|hakimasu haite
+I'll wear pants.|zubonwo hakimasu
+I put on a shirt.|shatsuwo kimashita
+I'll wear a kimono.|kimonowo kimasu
+Mariko is wearing red pants.|Marikosanwa akai zubonwo haite imasu
+John is not wearing a shirt.|Jonsanwa shatsuwo kite imasen
+Miss Suzuki was wearing a kimono.|Suzukisanwa kimonowo kite imashita
+She wasn't wearing Western clothes. She was wearing Japanese clothing.|sono hitowa yofukuwo kite imasen deshita. wafukuwo kite imashita
+dress|doresu
+suit|suutsu
+men's dress shirt|waishatsu
+sweater|seetaa
+underwear (in general)|shitagi
+underpants|pantsu
+bra|bura
+sock|sokusu
+shoe|kutsu
+high heels|haihiiru
+Mariko is wearing a sweater|Marikosanwa seetaawo kite imasu
+I will not wear shoes today|kyou watashiwa kutsuwo hakimasen
+Hanako was wearing a pretty dress|Hanakosanwa kireina doresuwo kite imashita
+What color socks are you wearing?|naniirono sokusuwo haite imasuka
+earring|iyaringu
+necktie|nekutai
+muffler / scarf|mafuraa
+belt|beruto
+glove|tebukuro
+hat|boushi
+wear on the head (*2)|kaburimasu kabutte
+wear around (waist, hands) (*2)|hamemasu hamete
+John was wearing a tie|Jonsanwa nekutaiwo shite imashita
+Mariko was wearing gloves yesterday|kinou Marikosanwa tebukurowo hamete imashita
+John wears a hat every day|Jonsanwa mainichi boushiwo kaburimasu
+Mariko, are you going to tonight's party?|Marikosan kyouno paatiini ikimasuka
+Yeah, I'm going. How about you? (to John)|un ikimasu. Jonsanwa
+I'm going. What are you going to wear?|ikimasu. naniwo kimasuka
+I'm going to wear a black dress|kuroi doresuwo kimasu
+I'm thinking I might wear a suit. What do you think?|watashiwa suutsuwo kimashoukane. dou desuka
+Ooh, a suit sounds nice. What color suit is it?|suutsuga ii desune. naniirono suutsu desuka
+japanese girl|yamatonadeshiko
+wonderful|suteki
+good job!|otsukaresama
+cigarette|tobako
+Do you smoke?|tobako suimasuka
+sleepy|nemui
+intonation|hatsuon
