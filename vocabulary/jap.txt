@@ -79,7 +79,7 @@ bicycle|jitensha
 ten|juu
 i liked japan|nihonga suki deshita
 i talk with Mariko every day|mainichi Marikosanto hanashimasu
-she's not japanese|nihonjin dewa arimasen
+she's not japanese|nihonjindewa arimasen
 i will go to japan in april|shigatsuni nihonni ikimasu
 that is a dog|sorewa inu desu
 twenty years old|hatachi
@@ -119,14 +119,14 @@ fun|tanoshii
 the seventh of the month|nanoka
 baseball|yakyuu
 sink|nagashidai
-But I don't like sushi|demo sushiga suki dewa arimasen
+But I don't like sushi|demo sushiga sukidewa arimasen
 teacher|sensei
 mr Nozaki was my teacher of geography|Nozakisanwa watashino chirino sensei deshita
 nine thousand|kyuusen
 vinegar|su
 please go to school|gakkouni itte kudasai
 i went to the station|watashiwa ekini ikimashita
-isn't she japanese?|nihonjin dewa arimasenka
+isn't she japanese?|nihonjindewa arimasenka
 a cheap book|yasui hon
 what did you read?|anatawa naniwo yomimashitaka
 study|benkyou
@@ -337,7 +337,7 @@ there were four hundred students at the school|gakkouni seitoga yonhyakunin imas
 How many mice are there in the kitchen?|daidokoroni nezumiga nanbiki imasuka
 every month|maitsuki
 window|mado
-it wasn't you|anata dewa nakatta
+it wasn't you|anatadewa nakatta
 i asked to the teacher|senseini kikimashita
 orange|orenji
 hobby|shumi
@@ -435,7 +435,7 @@ why didn't you go to school?|doushite gakkouni ikimasen deshitaka
 what day is it?|nanyoubi desuka
 my older sister|ane
 No, it was cheap. But it should be good|iie yasukatta. demo oishii deshou
-I don't like history, but I love geography|rekishiga suki dewa arimasen keredomo chiriga daisuki desu
+I don't like history, but I love geography|rekishiga sukidewa arimasen keredomo chiriga daisuki desu
 next month|raigetsu
 Mariko has money.|Marikosanwa okanega arimasu
 front / before|soto
@@ -534,7 +534,7 @@ the countryside|inaka
 Good afternoon|konnichiwa
 A likeable movie (that is, a movie that I like)|sukina eiga
 sad|kanashii
-i don't like my boyfriend's mom|kareno okaasanga suki dewa arimasen
+i don't like my boyfriend's mom|kareno okaasanga sukidewa arimasen
 rat|nezumi
 i dislike vegetables|yasaiga kirai desu
 the sixth of the month|muika
@@ -570,7 +570,7 @@ How much is this?|korewa ikura desuka
 july is summer, isn't it?|shichigatsuwa natsu desune
 what will you do tomorrow?|ashita naniwo shimasuka
 eight|hachi
-this is not my telephone number|korewa watashino denwa bangou dewa arimasen
+this is not my telephone number|korewa watashino denwa bangoudewa arimasen
 letter|tegami
 my husband|shujin
 Mr Suzuki will come at half past six|Suzukisanwa rokuji hanni kimasu
@@ -653,7 +653,7 @@ this way|kochira
 it's seven o'clock|shichiji desu
 You're talented, aren't you? It's delicious!|jouzu desune. oishii
 let's see it tomorrow|ashita mimashou
-i don't like chicken|chikinga suki dewa arimasen
+i don't like chicken|chikinga sukidewa arimasen
 understand (*2)|wakarimasu wakatte
 is this your telephone number?|korewa anatano denwa bangou desuka
 Hanako is an orange cat|Hanakochanwa orenjiirono neko desu
@@ -820,13 +820,13 @@ Mariko is tall|Marikosanwa sega takai
 9:10 pm|gogo kuji juppun
 how many rocks are there?|ishiga ikutsu arimasuka
 sushi|sushi
-It's not me|watashi dewa nai
+It's not me|watashidewa nai
 what is your name?|onamaewa nan desuka
 one hundred million|oku
 the fifth of the month|itsuka
 where did auntie go?|obasanwa dokoni ikimashitaka
 evening|ban
-don't you like beer?|biiruga suki dewa arimasenka
+don't you like beer?|biiruga sukidewa arimasenka
 five items|itsutsu
 this kind of x|konna
 Mariko, what are your interests?|Marikosan kyoumiwa nan desuka
@@ -1143,7 +1143,7 @@ I don't know that person|sono hitowo shirimasen
 four hundred|yonhyaku
 ice cream|aisukuri-mu
 test|tesuto
-This is not a white garbage can|korewa shiroi gomibako dewa arimasen
+This is not a white garbage can|korewa shiroi gomibakodewa arimasen
 you|anata
 October 14th|juugatsu juuyokka
 How old is your father?|otousanwa oikutsu desuka
@@ -1166,7 +1166,7 @@ unadorned raw fish|sashimi
 one person|hitori
 hair|ke
 three minutes|sanfun
-John's radio is noisy. I don't like it.|Jonsanno rajiowa urusai. suki dewa nai
+John's radio is noisy. I don't like it.|Jonsanno rajiowa urusai. sukidewa nai
 Do you know this person?|kono hitowo shitte imasuka
 wasn't good|yokunakatta
 March 20th, 2500|nisengohyakunen sangatsu hatsuka
@@ -1226,6 +1226,12 @@ Yeah, I'm going. How about you? (to John)|un ikimasu. Jonsanwa
 I'm going. What are you going to wear?|ikimasu. naniwo kimasuka
 I'm going to wear a black dress|kuroi doresuwo kimasu
 I'm thinking I might wear a suit. What do you think?|watashiwa suutsuwo kimashoukane. dou desuka
+It's a grey suit. The necktie is blue. And I'll wear brown shoes. Are you going to wear earrings? (to Mariko)|gureeno suutsu desu. nekutaiwa aoi desu. soshite chairono kutsuwo hakimasu. Marikosanwa iyaringuwo shimasuka
+Yeah. How about you? (about wearing earrings, to John)|shimasuyo. Jonsanwa
+(laughts) No, no (about wearing earrings). Well, I'm looking forward to the party!|hahaha shimasen shimasen. ja paatiiwo tanoshimini shite imasu
+to look forward to something|tanoshimini shimasu
+I'm looking forward to summer vacation|natsu yasumiwo tanoshimini shite imasu
+summer vacation|natsu yasumi
 Ooh, a suit sounds nice. What color suit is it?|suutsuga ii desune. naniirono suutsu desuka
 japanese girl|yamatonadeshiko
 good job!|otsukaresama
@@ -1233,3 +1239,46 @@ cigarette|tobako
 Do you smoke?|tobako suimasuka
 sleepy|nemui
 intonation|hatsuon
+She went by car.|kurumade ikimashita
+She came by train.|denshade kimashita
+She spoke by phone.|denwade hanashimashita
+What will she go by?|nande ikimasuka
+John is speaking in French|Jonsanwa furansugode hanashite imasu
+John read the newspaper at the station.|Jonsanwa ekide shibunwo yomimashita
+Mariko is studying English in America.|Marikosanwa amerikade eigowo benkyou shite imasu
+I watched TV in my bedroom.|heyade terebiwo mimashita
+I cleaned the car in front of the house.|ieno maede kurumawo souji shimashita
+She is sitting inside the car.|kurumano nakani suwatte imasu
+He was standing in the kitchen.|daidokoroni tabete imashita
+John will go to Germany by train.|Jonsanwa denshade doitsuni ikimasu
+Germany|doitsu
+Mariko was reading a book in the train.|Marikosanwa denshade honwo yonde imashita
+In America, the people are tall.|amerikadewa hitowa sega takai
+In Japan, gasoline is expensive.|nihondewa gasolinga takai desu
+Are there cats in China?|chuugokudewa nekoga imasuka
+boat|fune
+plane|hikouki
+bullet train|shinkansen
+Los Angeles|losanzerusu
+Chicago|shikago
+Seattle|shiatoru
+London|london
+suffix for states|shuu
+run (*2)|hashirimasu hashitte
+walk (*2)|arukimasu aruite
+swim (*2)|oyogimasu oyoide
+fly (*2)|tobimasu tonde
+drive|unten shimasu
+Washington state|washintonshuu
+New York state|nyuuyoukushuu
+I'll fly by plane next week from Chicago to Seattle|raishuu shikago kara shiatoru made hikoukide tobimasu
+Last year I drove from Washington State to New York State|kyonen washintonshuu kara nyuuyoukushuu made unten shimashita
+Let's swim from Japan to America|nihon kara amerika made oyogimashou
+I went from New York to London by boat, but it wasn't fun.|nyuuyouku kara london made funede ikimashita kedo tanoshikunakatta
+Won't you see a movie tomorrow?|ashita eigawo mimasenka
+That sounds nice. Where shall we see it?|ii desune. dokode mimashouka
+There's a nice theater in Shinjuku. Let's see it there.|shinjukuni ii eigakanga arimasu. asokode mimashou
+How shall we go? By taxi or train?|nande ikimashouka. takushiide ikimashouka. denshade ikimashouka
+Hmm...Taxis are expensive. Let's take the train.|takushiiwa takaine. denshade ikimashou
+What time shall we go?|nanjini ikimashouka
+Let's take the 6:30 train.|rokuji sanjuppunno denshade ikimashou

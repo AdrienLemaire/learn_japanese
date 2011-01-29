@@ -57,7 +57,11 @@ class Vocabulary:
             f_vocabulary = open(self.db_path, "r")
             for line in f_vocabulary.readlines():
                 args = self.verify(*line[:-1].split("|"))
-                questions.append(Question(*args))
+                try:
+                    questions.append(Question(*args))
+                except:
+                    raise NameError("You have a duplication in the user_files"
+                                    "vocabulary, try to fix it manually")
             # if there is new vocabulary, we add it
             for en_sentence, jp_sentence in self.vocabulary.iteritems():
                 questions.append(Question(en_sentence, jp_sentence, 0, 0))
