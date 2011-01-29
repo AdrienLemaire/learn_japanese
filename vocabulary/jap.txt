@@ -586,7 +586,7 @@ Fish. Do you like (that)?|sakana. suki desuka
 Let's go to the park at half past eight|hachiji hanni kouenni ikimashou
 i listened to music|ongakuwo kikimashita
 wear (lower body) (*2)|hakimasu haite
-charming|suteki
+charming / wonderful|suteki
 the twentyfourth of the month|nijuuyokka
 shall we go to an art gallery or museum?|bijutsukan ka hakubutsukan ni ikimashouka
 dog|inu
@@ -1191,9 +1191,7 @@ shirt|shatsu
 slacks / pants|zubon
 wear (upper body) (*2)|kimasu kite
 wear (lower body) (*2)|hakimasu haite
-I'll wear pants.|zubonwo hakimasu
 I put on a shirt.|shatsuwo kimashita
-I'll wear a kimono.|kimonowo kimasu
 Mariko is wearing red pants.|Marikosanwa akai zubonwo haite imasu
 John is not wearing a shirt.|Jonsanwa shatsuwo kite imasen
 Miss Suzuki was wearing a kimono.|Suzukisanwa kimonowo kite imashita
@@ -1230,7 +1228,6 @@ I'm going to wear a black dress|kuroi doresuwo kimasu
 I'm thinking I might wear a suit. What do you think?|watashiwa suutsuwo kimashoukane. dou desuka
 Ooh, a suit sounds nice. What color suit is it?|suutsuga ii desune. naniirono suutsu desuka
 japanese girl|yamatonadeshiko
-wonderful|suteki
 good job!|otsukaresama
 cigarette|tobako
 Do you smoke?|tobako suimasuka
