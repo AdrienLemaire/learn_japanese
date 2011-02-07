@@ -293,7 +293,7 @@ let's ~|mashou
 neck|kubi
 my husband won't come today|kyou shujinwa kimasen
 John doesn't have any money|Jonsanwa okanega arimasen
-I went to school, but the teacher wasn't there|gakkouni ikimashita ga senseiwa imasen deshita
+I went to school, but the teacher wasn't there|gakkouni ikimashitaga senseiwa imasen deshita
 please eat|tabete kudasai
 don't you eat japanese food?|anatawa washokuwo tabemasenka
 head|atama
@@ -411,7 +411,7 @@ sit (*2)|suwarimasu suwatte
 wrist|tekubi
 bad|warui
 Tarou is a boy|Tarousanwa otokono ko desu
-I put on a shirt|shatsuwo hakimashita
+I put on a shirt|shatsuwo kimashita
 There are ten rats at the station|ekini nezumiga juppiki imasu
 where is the station?|ekiwa dokoni arimasuka
 to drink|nomimasu
@@ -588,7 +588,7 @@ i listened to music|ongakuwo kikimashita
 wear (lower body) (*2)|hakimasu haite
 charming / wonderful|suteki
 the twentyfourth of the month|nijuuyokka
-shall we go to an art gallery or museum?|bijutsukan ka hakubutsukan ni ikimashouka
+shall we go to an art gallery or museum?|bijutsukanka hakubutsukanni ikimashouka
 dog|inu
 face|kao
 receive (*2)|ukemasu ukete
@@ -1244,12 +1244,12 @@ She came by train.|denshade kimashita
 She spoke by phone.|denwade hanashimashita
 What will she go by?|nande ikimasuka
 John is speaking in French|Jonsanwa furansugode hanashite imasu
-John read the newspaper at the station.|Jonsanwa ekide shibunwo yomimashita
+John read the newspaper at the station.|Jonsanwa ekide shinbunwo yomimashita
 Mariko is studying English in America.|Marikosanwa amerikade eigowo benkyou shite imasu
 I watched TV in my bedroom.|heyade terebiwo mimashita
 I cleaned the car in front of the house.|ieno maede kurumawo souji shimashita
 She is sitting inside the car.|kurumano nakani suwatte imasu
-He was standing in the kitchen.|daidokoroni tabete imashita
+He was standing in the kitchen.|daidokoroni tatte imashita
 John will go to Germany by train.|Jonsanwa denshade doitsuni ikimasu
 Germany|doitsu
 Mariko was reading a book in the train.|Marikosanwa denshade honwo yonde imashita
