@@ -22,6 +22,15 @@ Then download the project::
 .. _Python: http://python.org
 
 
+for older users
+~~~~~~~~~~~~~~~
+
+If you already used this program before the tag v2, you will want to update your
+user files to the new format. That can be done with::
+
+    $ cd utils
+    $ python migrate_v2.py
+
 Bugs
 ----
 First time you run the project, you will probably have an error, I'll fix it
@@ -32,4 +41,8 @@ How to use
 ----------
 If you want to contribute to the project, fill the lang.txt in the vocabulary
 directory. All files located in user_files are private for the user, containing
-his own statistics
+his own statistics, and are managed by the program.
+
+When ready::
+
+    $ ./main.py
