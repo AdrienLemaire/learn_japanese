@@ -103,7 +103,7 @@ branch|succursale
 agreement|accord, contrat
 economics| science économique
 share/stock|part action
-forecast|pévision
+forecast|prévision
 to run a firm|diriger une entreprise
 to supply|fournir
 loan|prêt, emprunt
@@ -244,7 +244,7 @@ the homeless|sans-abris
 assitance|aide
 unhealthy|insalubre
 illiteracy|analphabétisme
-the bare necessities|nécessaité de base
+the bare necessities|nécessité de base
 unemployement benefits|allocation chômage
 to be job hunting|recherche d'un emploi
 the labour market|marcher du travail
@@ -307,7 +307,7 @@ an employee handbook|convension
 staff attendance/to be tardy|présence du personnel/être en retard
 an employee expense voucher|note de frais
 voucher|bon, recu
-upsizinz|augmentation
+upsizing|augmentation
 downsizing|diminution
 a resume|CV
 a cover letter|lettre de motivation
@@ -457,7 +457,6 @@ telecommuting|travailler de chez soi
 to convene|convoquer
 to cancel|annuler
 to schedule an appointment|fixer une rendez-vous
-to require|exiger
 workload|quantité de travail
 backlog|retard dans son travail
 a sale policy|politique de vente
@@ -650,10 +649,9 @@ look into|examiner avec soin
 look out|faire attention
 look out on|donner sur
 look over|examiner
-look up|chercher
+look up/look for/to seek|chercher
 look up to|avoir un grand respect pour
 look like|ressembler
-look for|chercher
 make do|se débrouiller
 make good|réussir
 make out|déchiffrer, réussir
@@ -697,7 +695,7 @@ take in|voir
 take off|enlever, décoller
 take on|engager
 take out|sortir
-take avoer|se charger de
+take over|se charger de
 take part in|participer à
 take place|avoir lieu
 take up|étudier
@@ -718,9 +716,619 @@ turn on|allumer
 turn out|devenir
 wait for|attendre
 wait on|servir
-wear down|user
+wear down / wear out|user
 wear off|dissparaitre
-wear out|user
 work out|bien finir
 naughty|vilain
 stack|pile, tas
+when i do|quand je le fais
+when i've done|quand je l'ai fais
+on time|à l'heure
+in time|dans le temps
+at the end|à la fin
+in the end|finalement
+at 5 o'clock|à 5 heures
+on friday|le vendredi
+in october|en octobre
+in a box|dans la boite
+at the top|au sommet
+on the bottle|sur la bouteille
+ability|aptittude, compétence
+able|capable
+to be able to do something|pouvoir faire
+about|vers, environ, à propos de
+above|au-dessus
+academic|universitaire
+acess|accès
+according|selon, suivant
+account for|rendre compte de quelque chose
+to achieve|atteindre
+an achievement|réussite
+to acquiere something|acquérir
+accross|au travers
+to act|agir
+actual|véritable
+to address someone|se mettre à quelque chose
+ao admin|laisser entrer
+advance|avance
+advice|conseil
+to advise someone|conseiller quelqu'un
+an affair|affaire
+to affect something|avoir un effet sur quelque chose
+to affort|avoir les moyens
+after|après
+afterward|plutard
+again|de nouveau
+to agree|être d'accord
+agreement|accord
+ahead|en avant, devant
+aid|aide
+aircraft|avion
+to allow something|permettre quelque chose
+alone|seul
+along|le long de
+also|aussi, de plus
+amount|montant
+analysis|analyse
+anciant|antique
+another|encore un
+any|n'importe, aucun
+appart|à part
+apparent|évident
+apparently|apparemment
+appeal|lancer un appel
+to appear|se montrer
+appearance|apparition
+to apply to someone|s'adresser à quelqu'un
+to apply for something|appliquer
+an approach|approche
+to approach|s'approcher
+appropriate|opportun
+to approve|approuver
+area|zone
+to argue|se disputer
+to arise|survenir
+around|autour
+as|comme, alors que,tandis que
+assess|estimer
+assessment|estimation
+to assume something|supposer
+assumption|supposition
+attempt|essayer, tenter
+to attend|assister à
+to attract|attirer
+author|auteur
+authority|autorité
+to avoid|éviter
+aware|conscient
+away|au loin
+back|dos, arrière
+background|arrière plan
+balance|équilibré
+ball|balle
+band|bande
+bar|barre
+bear|porter
+beat|battre
+behave|se conduire
+behavior|conduite
+behind|derrière
+belong|appartenir
+below|au dessous
+benefit|avantage
+beside|à coté de
+best|le meilleur
+better|meilleur que
+beyond|au delà de
+bind|attacher
+birth|naissance
+bloody|tache de sang
+blow|pousser
+board|planche
+bone|os,arête
+both|les deux
+bottom|bas
+a brain|cerveau
+a breath|haleine
+bright|brillant
+broad|large
+business|affaire
+by|près, par
+cabinet|meuble, cabinet
+care|attention
+care for|soigner
+careful|soigneux
+careless|manquer de soin
+carefully|soigneusement
+to carry|porter
+case|valise
+cash|argent
+a cell|cellule
+to center|centre
+a century|siècle
+a chain|chaîne
+a chair|chaise
+chairman|président d'in commiter
+challenge|défi
+chance|hasard
+change|changement
+to change|changer
+a channel|canal
+a charge|accusation
+cheap|bon marché
+chemical|chimique
+church|église
+a claim|revendication
+to claim|revendiquer
+clear|clair
+to climb|grimper
+clothes|vêtements
+to clothes|habiller
+club|matraque
+a coal|charbon
+to collect|accumuler
+a collection|rassemblement
+combination|combinaison
+to combine|combiner
+to commit|commettre
+common|commun
+comportement|constituant
+concerned|inquiet
+to conduct|conduire
+confidence|confiance
+congress|congrès
+to connect|relier
+consumer|consommateur
+to contain|contenir
+corporate|appartenant
+council|un conseil
+county|comté
+course|cours
+court|tribunal
+cover|couvercle
+crisis|crise
+criterion|critère
+critical|critique
+crowd|foule
+cry|crier
+current|courant
+a cut|coup
+damage|dégât
+to damage|endomager
+daughter|fille
+debt|dette
+decade|decenie
+deep|profond
+deliver|remettre
+to deny|nier
+deputy|adjoint
+to derive|tirer
+despite|malgré
+detail|détail
+device|appareil
+die|dé, mourir
+to direct|adresser
+disappear|disparaitre
+disease|maladie
+display|montrer
+district|région
+to divide|diviser
+doubt|doute
+down|en bas
+to draw|dessiner
+drawing|dessin
+dress|robe
+to dress|habiller
+to drop|laisser tomber
+due|dû
+duty|devoir
+ear|oreille
+early|tôt
+earn|gagner
+edge|bord
+editor|redacteur
+educational|pédagogique
+effect|effet
+effective|efficace
+elderly|assez agé
+else|sinon
+elsewhere|ailleurs
+to emerge|apparaitre
+emphasis|accentuation
+to enable|permettre
+engine|moteur
+enough|assez
+ensure|assurer
+to entitle|intituler
+entry|inscription
+equally|également
+establish|constituer
+even|même, uni
+eventually|finalement
+ever|jamais
+every|chaque
+except|sauf
+to expect|éxiger
+expectation|attente
+to expense|dépenser
+expenditure|dépense
+to experience|connaître
+experiment|expérience
+to express|s'exprimer
+to extend|étendre
+extent|étendu
+to face something|faire face
+fairly|équitablement
+faith|foi
+a fall|une chute
+famous|célèbre
+fashion|facon
+favour|service
+feeling|sensation
+few|quelque, peu
+figure|chiffre
+finding|conclusion
+fine|amande, bien
+to fit|aller à
+flat|plat
+foreign|étranger
+formal|formaliste
+former|ancient
+forward|en avant avancer
+front|premier plan
+fully|entièrement
+further|d'avantage, plus
+to gain|gagner
+gate|porte
+to gather|rassembler
+goods|marchandises
+to grant|accorder
+a grant|subvention
+great|grand
+hall|salle
+hand|main
+handle|manche
+hang|suspendre
+hardly|à peine
+head|tête
+head for|diriger
+head off|partir
+health|santé
+heart|coeur
+heat|chaleur
+heavy|lourd
+hell|enfer
+herself|elle-même
+highly|extrêmement
+hill|colline
+hole|trou
+hope|espoir
+hot|chaud
+household|occupant
+housing|logement
+however|cependant, néanmoins, pourtant
+huge|énorme
+hurt|blesser
+to imply|laisser entendre
+income|revenu
+increasingly|de plus en plus
+to inform about|informer
+to inform of|dénoncer
+injury|blessure
+inside|dedans
+instance|exemple
+instead|au lieu de cela
+to intend|avoir l'intention de
+interview|entrevue
+to investigate|enquêter
+to involve|s'impliquer
+iron|fer
+issue|question
+to issue|publier
+itself|lui-même
+joint|articulation
+journey|voyage
+knee|genou
+lady|dame
+land|terre
+largely|surtout
+to last|durer
+latter|dernier
+to laugh|rire
+to launch|lancer
+to la|étendre
+leaf|feuille
+to lean|se pencher
+least|le moins
+liability|responsabilité
+to lie|mentir
+to lift|soulever
+light|léger, lumière
+likely|probable
+lip|lèvre
+living|vivant
+location|emplacement
+lonely|seul
+lord|seigneur
+lovely|ravissant
+low|faible
+mainly|principalement
+major|majeur
+to manage|gérer
+management|gestion, direction
+manager|gérant
+to market|vendre
+to marry|épouser
+match|allumette
+to match|allumer
+matter|matière
+meal|repas
+meaning|sens
+a means|milieu
+meanwhile|en attedant
+most|le plus
+motion|mouvement
+mouth|bouche
+murder|meurtre
+narrow|étroit
+nearly|presque
+neck|cou
+neighbour|voisin
+neverthless|néanmoins
+to nod|faire signer
+noise|bruit
+to note|noter
+a notice|notification
+to notice|remarquer
+notion|idée
+nurse|infirmière
+obvious|évident
+to occur|avoir lieu
+odd|bizare
+offence|delit
+once|une fois
+to operate|opérer
+otherwise|autrement
+ought|devrais
+our|notre
+ourselves|nous-même
+outcome|résultat
+over|trop
+overall|en général
+own|propre
+to own|posseder
+owner|propriétaire
+pain|douleur, souffrir
+painting|peinture
+panel|panneau
+particularly|particularité
+pattern|dessin
+to perform|executer
+to pick|choisir
+to plan|planifier
+plenty|abondance
+pool|flaque
+powerful|puissant
+partical|pratique
+pressure|pression
+to prevent|êmpecher
+primre|premier
+to promote|promouvoir
+proper|convenable
+provided|à condition
+to publish|étudier
+to pull|tirer
+purpose|but
+quiet|tranquille
+quite|complètement
+range|à porté de
+rate|taux
+rather|preferable
+to reach|porter de
+a record|rapport
+to recover|récupérer
+to refer|soumettre
+refer to|parler de
+to regard|estimer
+regular|habituer
+regulation|règlementation
+to reject|inadapter
+to relate|rencontrer
+relatively|relativement
+relevant|pertinent
+relief|soulagement
+to remain|subsister
+to reply|répondre
+to report to|se présenter
+representative|représentant
+request|demande
+requirement|éxigence
+rest|repos
+to rest|se reposer
+to retain|conserver
+to reveal|réveler
+review|révision, revue
+to ride|monter à
+a ring|anneau
+river|rivière
+rock|roche
+to roll|faire rouler
+roof|toit
+round|tranche, manche
+row|rangée, promenade
+rule|règle
+safety|sureté
+sample|échantillon
+scale|écaille
+scheme|arrangement
+to score|marquer
+a seat|chaise
+to seem|sembler
+servant|domestique
+session|séance
+a set|jeu
+to settle|installer
+settlement|règlement
+ship|bateau
+to shoot|lancer
+a shoulder|épaule
+sight|vue
+a sign|signe
+significiance|importance
+simply|simplement
+site|emplacement
+skin|peau
+slightly|légèrement
+to slip|glisser
+soft|mou
+a soil|terre
+solicitor|notaire
+some|certain
+soon|bientôt
+to sound|sonner
+species|espèce
+a speech|discours
+spirit|esprit
+spot|endroit
+to spread|écarter
+a spring|printemps
+to stand|poser
+state|état, situation
+to state|déclarer
+a step|pas
+to step|faire un pas
+to stick to someone|rester auprès de quelqu'un
+a stone|pierre
+store|provision
+straight|droit
+strength|force
+strongly|vigoureusement
+such|tel
+to suffer|subir
+sufficient|suffisant
+suitable|convenable
+to suround|entourer
+a survey|contempler
+tape|ruban
+a tear|larme
+to tear|déchirer
+to tend|s'occuper de
+terms|condition
+themselves|eux-même
+then|alors
+therefor|donc
+these|ceux-ci
+thin|mince
+though|bien que
+threat|menace
+to threaten|menacer
+troughout|partout
+thus|ainsi
+tiny|minuscule
+tone|sonorité
+toward|vers
+town|ville
+to train|former
+to travel|voyager
+treaty|traité
+trend|tendance
+trip|voyage
+trouble|ennui
+truth|vérité
+twice|deux fois
+undertake|entreprendre
+unfortunately|malheureusement
+unless|moins que
+unlikely|improbable
+until|jusqu'à
+upon|sur
+upper|supperieur
+a use|utilisation
+used|occasion
+usual|habituel
+various|divers
+to vary|varier
+a walk|promenade
+whatever|quoi que
+whereas|alors que
+whether|si
+which|lequel
+a while|moment
+whole|entier
+whose|à qui
+wide|large
+wild|sauvage
+a will|volonté
+wind|vent
+wing|aile
+withdraw|retirer
+within|intérieur
+to wonder|demander
+a wonder|miracle
+wonderfull|merveilleux
+woose|bois
+writing|écriture
+wong|mal
+yeah|ouais
+youth|jeunesse
+a watch|montre
+plummet|descendre à pic
+bulge|gonflement
+lured|attirer
+steady|stable
+sudden|soudain
+to book|louer
+praised|faire l'éloge
+venture|entreprise
+sue|poursuivre
+exiting|dépasser
+abroad|à bord
+postpone|reporter
+having|ayant
+stiff|rigide
+waste|gaspillage
+to warm|prévenir
+bargain|faire affaire
+shell life|durée de vie
+bother|ennuyeux
+to snatch|kidnapper
+to deter|détourner
+plot|complot
+intractable|intraitable
+hardback|gros livre
+paperback|livre de poche
+halted|interrompre
+breached|infraction
+pledges|engagement
+pointed out|montrer
+By then|d'ici là
+steadyly|régulièrement
+hastily|précipitement
+haox|canular
+boiling|bouilli
+chilly|froid
+accurent|exact
+stuff|truc
+to handle|manipuler
+stalling regarding|blocage
+point regarding|point sur
+standstill|arrêt
+bonds|obligation
+to pay off|à payer
+to pay for|à payer pour
+apprentice|apprenti
+fewer (pluriel)|moins de
+lecturer|conférencier
+as a limited partnership|société en commandité
+to point out|remarquer
+offer to prepare|à proposé d'établir
+relegate to|reléguer
+mover over|se déplacer sur
+granted|accordé
+entire|ensemble
+At the time|à la fois
+a warm|chaude
+stretch|étirer
+hatively|précipitamment
+timely|opportun
+timely fashion|temps opportun
