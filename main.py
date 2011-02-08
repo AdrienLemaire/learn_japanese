@@ -93,8 +93,9 @@ class Vocabulary:
         response = question.verify(answer)
         print response
         if "False, the answer was" in response:
+            # We ask the user to write down the answer 3 times
             print _("\tWrite the answer 3 times :", "yellow")
-            [raw_input(_("\t\t%d:" % i, "yellow")) for i in range(3)]
+            [raw_input(_("\t\t%d: " % i, "yellow")) for i in range(3)]
 
     def signal_handler(self, signal, frame):
         """Save the data in the file before exiting the program"""
@@ -105,7 +106,6 @@ class Vocabulary:
         """Verify if the question is in the dictionary and hasn't been
         modified. Otherwise, we update the sentences in the txt file"""
         # First, is the key present in the dictionary?
-        #import ipdb;ipdb.set_trace()
         if question in self.vocabulary:
             answer = self.vocabulary[question]
         if question[1:] in self.vocabulary:
@@ -201,23 +201,29 @@ class Question(object):
             self.question = "#%s" % self.question
             return _("The sentence '%s' will be removed for the next "\
                 "session" % self.answer, "yellow", attrs=["bold"])
-        elif self.answer == answer:
+        elif answer in ("@%s" % self.answer, self.answer):
             self.success += 1
-            return _(random.choice(self.congrats), "green")
+            response = random.choice(self.congrats)
+            if answer.startswith("@"):
+                response += ", it was '%s'" % self.answer
+            return _(response, "green")
         else:
             self.failure += 1
             return _("False, the answer was '%s'" % self.answer, "red")
 
     def update(self, index, question, answer, success, failure):
-        self.question = question
-        self.answer = answer
+        """We keep the text from the vocabulary folder, which is the most up to
+        date, but we update the stats and commented lines from the user_files
+        directory"""
+        if question.startswith("#"):
+            self.question = "#%s" % self.question
         self.success = int(success)
         self.failure = int(failure)
 
 
 class Q_Japanese(Question):
     """Japanese question with some special verifications"""
-    l_prefix = ["watashiwa ", "anatawa ", ""]
+    l_prefix = ["watashiwa ", "anatawa "]
     l_replace = {
         "arimasen": "nai",
     }
@@ -231,7 +237,7 @@ class Q_Japanese(Question):
                 self.l_prefix] or answer in ["%s%s" % (p, self.answer)
                 for p in self.l_prefix]:
             """Allow to validate a sentence if the prefix is not mandatory"""
-            answer = self.answer
+            answer = "@%s" % self.answer
         return super(Q_Japanese, self).verify(answer)
 
 
