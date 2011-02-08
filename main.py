@@ -7,13 +7,13 @@ Currently a console program, don't forget to install termcolor
 '''
 
 
-#from collections import OrderedDict
 from os import listdir
 import os.path
 import random
 import signal
 from termcolor import colored as _
 import sys
+
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 LANG_DIR = os.path.join(PROJECT_ROOT, "vocabulary")
@@ -22,6 +22,8 @@ D_CLASSES = {
     "en": lambda: Question,
     "jap": lambda: Q_Japanese,
 }
+L_PREFIX = lambda prefix, answer: ["%s %s" % (p, answer) for p in prefix]
+L_SUFFIX = lambda answer, suffix: ["%s %s" % (answer, s) for s in suffix]
 
 
 class Vocabulary:
@@ -224,8 +226,11 @@ class Question(object):
 class Q_Japanese(Question):
     """Japanese question with some special verifications"""
     l_prefix = ["watashiwa ", "anatawa ", "korewa "]
+    l_suffix = [" desu", ]
     l_replace = {
         "arimasen": "nai",
+        "seito": "gakusei",
+        "ne": "yo",
     }
 
     def __init__(self, *args):
@@ -233,9 +238,10 @@ class Q_Japanese(Question):
         self.congrats += ["すごい", "いい", "じょうず", "よかった"]  # NOQA
 
     def verify(self, answer):
-        if self.answer in ["%s%s" % (prefix, answer) for prefix in
-                self.l_prefix] or answer in ["%s%s" % (p, self.answer)
-                for p in self.l_prefix]:
+        if answer in L_PREFIX(self.l_prefix, self.answer) +\
+                L_SUFFIX(self.answer, self.l_suffix) or self.answer in\
+                L_PREFIX(self.l_prefix, answer) +\
+                L_SUFFIX(answer, self.l_suffix):
             """Allow to validate a sentence if the prefix is not mandatory"""
             answer = "@%s" % self.answer
         return super(Q_Japanese, self).verify(answer)
