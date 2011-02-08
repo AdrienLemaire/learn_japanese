@@ -940,7 +940,7 @@ five|go
 desk|tsukue
 Mr Suzuki has had the flu since Monday|Suzukisanwa getsuyoubi kara infuruenza desu
 12:31|juuniji sanjuuippun
-usually|futsu
+usually|futsuu
 color|iro
 shoulder|kata
 sandwitch|sandoichi
@@ -1118,7 +1118,7 @@ The water is not blue|mizuwa aokunai
 100 yen|hyakuen
 there you are / go ahead / after you|douzo
 postal stamp|kitte
-to wait|mattemasu
+to wait (*2)|machimasu matte
 mobile phone|keita denwa
 go down (*2)|sagarimasu sagatte
 yeah, i like it.|un suki desuyo
@@ -1282,3 +1282,10 @@ How shall we go? By taxi or train?|nande ikimashouka. takushiide ikimashouka. de
 Hmm...Taxis are expensive. Let's take the train.|takushiiwa takaine. denshade ikimashou
 What time shall we go?|nanjini ikimashouka
 Let's take the 6:30 train.|rokuji sanjuppunno denshade ikimashou
+I was drunk yesterday|kinou osake nomimashita
+to remember|oboemasu
+I want to say|iitai
+Do you always wake up in the morning?|asawa itsumo nanji ni okimasuka
+It is different|chigau
+same|issho
+congratulations|omedetougozaimasu

@@ -12,7 +12,7 @@ from os import listdir
 import os.path
 import random
 import signal
-from termcolor import colored
+from termcolor import colored as _
 import sys
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -89,8 +89,12 @@ class Vocabulary:
                 # if the question doesn't start with #, it's fine
                 break
         print question
-        answer = raw_input(colored("Answer :", "blue"))
-        print question.verify(answer)
+        answer = raw_input(_("Answer :", "blue"))
+        response = question.verify(answer)
+        print response
+        if "False, the answer was" in response:
+            print _("\tWrite the answer 3 times :", "yellow")
+            [raw_input(_("\t\t%d:" % i, "yellow")) for i in range(3)]
 
     def signal_handler(self, signal, frame):
         """Save the data in the file before exiting the program"""
@@ -147,12 +151,12 @@ class Question(object):
         self.congrats = ["Yes", "Good", "Perfect", "Congrats"]
 
     def __str__(self):
-        question = colored("Question", "blue")
+        question = _("Question", "blue")
         infos = []
         if self.success:
-            infos.append("found:%s" % colored(self.success, "green"))
+            infos.append("found:%s" % _(self.success, "green"))
         if self.failure:
-            infos.append("failed:%s" % colored(self.failure, "red"))
+            infos.append("failed:%s" % _(self.failure, "red"))
         if infos:
             question += " (%s)" % ', '.join(infos)
         return "%s\n\t%s" % (question, self.question)
@@ -173,9 +177,9 @@ class Question(object):
     @classmethod
     def _stats(cls):
         """Class function to get some stats on its instances"""
-        return " - %s bad answers\n" % len(cls.questions_failed) +\
-               " - %s correct answers\n" % cls.total_success +\
-               " - %s archived questions\n" % cls.total_commented +\
+        return " - %s bad answers\n" % _(len(cls.questions_failed), "red") +\
+               " - %s correct answers\n" % _(cls.total_success, "green") +\
+               " - %s archived \n" % _(cls.total_commented, "yellow") +\
                " - %s unanswered questions\n" % cls.total_unanswered +\
                " - %s total question\n\n" % cls.total_questions
 
@@ -195,14 +199,14 @@ class Question(object):
             """ If I know the question/answer, don't bother and remove it
             now from the vocabulary"""
             self.question = "#%s" % self.question
-            return colored("The sentence '%s' will be removed for the next "\
+            return _("The sentence '%s' will be removed for the next "\
                 "session" % self.answer, "yellow", attrs=["bold"])
         elif self.answer == answer:
             self.success += 1
-            return colored(random.choice(self.congrats), "green")
+            return _(random.choice(self.congrats), "green")
         else:
             self.failure += 1
-            return colored("False, the answer was '%s'" % self.answer, "red")
+            return _("False, the answer was '%s'" % self.answer, "red")
 
     def update(self, index, question, answer, success, failure):
         self.question = question
@@ -243,7 +247,7 @@ def get_file_language():
     # ask the user choice
     question = "Choose a language from the list below:\n%s\n=> " % l_langs
     while True:
-        answer = raw_input(colored(question, "blue"))
+        answer = raw_input(_(question, "blue"))
         if answer in [str(i) for i in range(1, len(l_files) + 1)]:
             break
     # return file
@@ -256,14 +260,14 @@ if __name__ == "__main__":
 
     # Welcome message
     title = "welcome to 'learn a language'".title()
-    print colored("\n\n\t\t%s\n\n" % title, "red",
+    print _("\n\n\t\t%s\n\n" % title, "red",
         attrs=["bold", "underline"])
 
     # Choose Language
     vocab_file = get_file_language()
 
     # Another message with some shortcuts tips
-    print colored("The program will now start\n\t"
+    print _("The program will now start\n\t"
         "- press '#' to remove the question\n\t"
         "- press ctrl-C to quit the program\n\n",
         "magenta", attrs=["bold"])
