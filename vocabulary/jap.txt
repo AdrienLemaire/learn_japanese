@@ -29,7 +29,7 @@ my mom went to the station|hahawa ekini ikimashita
 every week|maishuu
 whose family is this?|kono hitotachiwa dareno kazoku desuka
 honda of japan|nihonno honda
-i'm fine (thank you)|okage-sama de
+i'm fine (thank you)|okagesama de
 which way is the restaurant?|resutoranwa dochira desuka
 there are rocks over there|ishiga asokoni arimasu
 japanese clothing|wafuku
@@ -504,7 +504,7 @@ i don't have any money|okanega arimasen
 grandpa|ojiichan
 This sake is 1500 yen. I think I'll buy three bottles for my father|kono sakewa sengohyakuen desu. chichini sanbon kaimashou
 I'm 65|rokujuugosai desu
-a little|chouto
+a little|chotto
 i will go in october|juugatsuni ikimasu
 when is Mariko's birthday?|Marikosanno tanjoubiwa itsu desuka
 july|shichigatsu
@@ -969,7 +969,7 @@ nose / flower|hana
 this is a newspaper|korewa shinbun desu
 i'll go on monday. i'll also go on tuesday|getsuyoubini ikimasu. kayoubinimo ikimasu
 Mariko, is there a person you like?|Marikosan sukina hitoga imasuka
-I'm not feeling so well|guaiga chouto warui desu
+I'm not feeling so well|guaiga chotto warui desu
 How many horses did you see?|umawo nanbiki mimashitaka
 let's play baseball tomorrow|ashita yakyuuwo shimashou
 there is a lake|mizuumiga arimasu
@@ -1289,3 +1289,51 @@ Do you always wake up in the morning?|asawa itsumo nanji ni okimasuka
 It is different|chigau
 same|issho
 congratulations|omedetougozaimasu
+work (the concept)|shigoto
+work (the place)|shigotoba
+part-time job|arubaito
+factory|koujou
+office|jimusho
+(one's) pay|kyuuryou
+to work (*2)|hatarakimasu hataraite
+Where do you work?|dokode hataraite imasuka
+I work at Sony|sonyde hataraite imasu
+What kind of work do you do there?|sokode donna shigotowo shite imasuka
+professor|kyouju
+lawyer|bengoshi
+office worker|sarariiman
+secretary|hisho
+shopkeeper|tenin
+sofware|softo
+programmer|puroguramaa
+I work at a bank|ginkoude hataraite imasu
+Mr. Suzuki works at a college|suzukisanwa daigakude hataraite imasu
+Mariko works at a bakery.|Marikosanwa panyade hataraite imasu
+John works at a bookstore.|Jonsanwa honyade hataraite imasu
+Mariko is a florist.|Marikosanwa hanayasan desu
+John is a computer shop worker|Jonsanwa konpyuutaayasan desu
+president of company|shachou
+department head|buchou
+employee|juugyouin
+colleague|douryou
+editing|penshuu
+~ Department|bu
+department|bumon
+section head|kachou
+accounting|kaikei
+~ Section|ka
+to wait (*2)|machimasu matte
+Are you busy at work?|shigotowa isogashii desuka
+Mariko is waiting for the train|Marikosanwa denshawo matte imasu
+John waited for the phone call.|Jonsanwa denwawo machimashita
+What are you waiting for?|naniwo matte imasuka
+Miss Suzuki! Please wait a moment!|Suzukisan chotto matte kudasai
+Mariko, where do you work?|Marikosanwa dokode hataraite imasuka
+I work at a software company in Tokyo.|toukyouno softono kaishade hataraite imasu
+Is it enjoyable work?|tanoshii shigoto desuka
+Yeah, the president is nice. My colleagues are nice people, too.|un shachouwa yasashii. douryoumo yasashii hitotachi desu
+That sounds nice. I'm an attorney, and our president is really mean. The work is difficult, too. But the pay is good.|ii desune. watashiwa bengoshi desu kedo shachouwa totemo kibishii desu. shigotomo muzukashii. demo kyuuryouga ii
+How long have you worked there?|itsu kara sokode hataraite imasuka
+From last summer. How long have you worked at the software company?|kyonenno natsu kara desu. Marikosanwa itsu kara softono kaishade hataraite imasuka
+From February of this year. Hey, shall we get some lunch?|kotoshino nigatsu kara desu. ne hirugohanwo tabemashouka
+Sounds good|ii desune

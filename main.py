@@ -223,7 +223,7 @@ class Question(object):
 
 class Q_Japanese(Question):
     """Japanese question with some special verifications"""
-    l_prefix = ["watashiwa ", "anatawa "]
+    l_prefix = ["watashiwa ", "anatawa ", "korewa "]
     l_replace = {
         "arimasen": "nai",
     }
