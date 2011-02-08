@@ -55,7 +55,10 @@ class Vocabulary:
                 f_vocabulary.write(question.db_format)
             f_vocabulary.close()
         else:
-            """We update the questions with the user's stats"""
+            # reset the stats
+            self.t_class().total_unanswered = 0
+            self.t_class().total_questions = 0
+            # update with user stats
             user_vocab = open(self.db_path, "r")
             for line in user_vocab.readlines():
                 args = self.get_args(line)
@@ -149,7 +152,6 @@ class Question(object):
         self.answer = answer
         self.success = int(success)
         self.failure = int(failure)
-        self.__class__.total_questions += 1
         self.congrats = ["Yes", "Good", "Perfect", "Congrats"]
 
     def __str__(self):
@@ -175,6 +177,7 @@ class Question(object):
                 self.__class__.total_success += 1
             elif value == 0 and self.success == 0:  # question unanswered
                 self.__class__.total_unanswered += 1
+            self.__class__.total_questions += 1     # total question
 
     @classmethod
     def _stats(cls):
@@ -225,8 +228,8 @@ class Question(object):
 
 class Q_Japanese(Question):
     """Japanese question with some special verifications"""
-    l_prefix = ["watashiwa ", "anatawa ", "korewa "]
-    l_suffix = [" desu", ]
+    l_prefix = ["watashiwa", "anatawa", "korewa"]
+    l_suffix = ["desu", ]
     l_replace = {
         "arimasen": "nai",
         "seito": "gakusei",

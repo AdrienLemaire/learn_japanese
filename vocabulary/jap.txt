@@ -29,7 +29,7 @@ my mom went to the station|hahawa ekini ikimashita
 every week|maishuu
 whose family is this?|kono hitotachiwa dareno kazoku desuka
 honda of japan|nihonno honda
-i'm fine (thank you)|okagesama de
+i'm fine (thank you)|okagesamade
 which way is the restaurant?|resutoranwa dochira desuka
 there are rocks over there|ishiga asokoni arimasu
 japanese clothing|wafuku
@@ -71,7 +71,7 @@ there are rocks, trees, rivers and things like that|ishiya kiya kawaga arimasu
 to come|kimasu
 It's hot weather today, isn't it?|kyouwa atsui otenki desune
 three (counter for animals)|sanbiki
-and, etc. / store suffix|ya
+and, etc.|ya
 green grape|masukanito
 four items|yottsu
 bill|satsu
@@ -85,7 +85,7 @@ that is a dog|sorewa inu desu
 twenty years old|hatachi
 fast food|fasuto fuudo
 Mariko went|Marikosanga ikimashita
-bottom / below / tongue|shita
+bottom / below|shita
 three (long, cylindrical objects)|sanbon
 The teacher's desk is short (low to the ground)|senseino tsukuewa hikui
 blue|aoi
@@ -662,7 +662,7 @@ won't you read?|yomimasenka
 morning|asa
 It's a blue sky|aoi sora desu
 A skilled teacher|jouzuna sensei
-clock/watch|tokei
+clock / watch|tokei
 why is it? how is it?|doushite desuka
 river|kawa
 where|doko
@@ -1137,7 +1137,7 @@ I've had a cough since Friday|kinyoubi kara sekiga demasu
 six (small roundish things)|rokko
 Mr. Suzuki is a bad teacher, isn't he?|Suzukisanwa hetana sensei desune
 diarrhea|geri
-child / counter for small, roundish things|ko
+counter for small, roundish things|ko
 last week mrs. Suzuki read|senshuu Suzukisanwa yomimashita
 I don't know that person|sono hitowo shirimasen
 four hundred|yonhyaku
@@ -1304,7 +1304,7 @@ lawyer|bengoshi
 office worker|sarariiman
 secretary|hisho
 shopkeeper|tenin
-sofware|softo
+sofware|sofuto
 programmer|puroguramaa
 I work at a bank|ginkoude hataraite imasu
 Mr. Suzuki works at a college|suzukisanwa daigakude hataraite imasu
@@ -1329,11 +1329,14 @@ John waited for the phone call.|Jonsanwa denwawo machimashita
 What are you waiting for?|naniwo matte imasuka
 Miss Suzuki! Please wait a moment!|Suzukisan chotto matte kudasai
 Mariko, where do you work?|Marikosanwa dokode hataraite imasuka
-I work at a software company in Tokyo.|toukyouno softono kaishade hataraite imasu
+I work at a software company in Tokyo.|toukyouno sofutono kaishade hataraite imasu
 Is it enjoyable work?|tanoshii shigoto desuka
 Yeah, the president is nice. My colleagues are nice people, too.|un shachouwa yasashii. douryoumo yasashii hitotachi desu
 That sounds nice. I'm an attorney, and our president is really mean. The work is difficult, too. But the pay is good.|ii desune. watashiwa bengoshi desu kedo shachouwa totemo kibishii desu. shigotomo muzukashii. demo kyuuryouga ii
 How long have you worked there?|itsu kara sokode hataraite imasuka
-From last summer. How long have you worked at the software company?|kyonenno natsu kara desu. Marikosanwa itsu kara softono kaishade hataraite imasuka
+From last summer. How long have you worked at the software company?|kyonenno natsu kara desu. Marikosanwa itsu kara sofutono kaishade hataraite imasuka
 From February of this year. Hey, shall we get some lunch?|kotoshino nigatsu kara desu. ne hirugohanwo tabemashouka
 Sounds good|ii desune
+child|ko
+tongue|shita
+store suffix|ya
