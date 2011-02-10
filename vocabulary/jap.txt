@@ -146,7 +146,7 @@ you are american|amerikajin desu
 this morning i ate breakfast, and then i went to school.|kesa asagohanwo tabete gakkouni ikimashita
 where is your company?|anatano kaishawa dokoni arimasuka
 to go shopping|kaimononi ikimasu
-where is tokyo?|tokyowa doko desuka
+where is tokyo?|toukyouwa doko desuka
 apple|ringo
 hiking|haikingu
 there is a dog in the kitchen|daidokoroni inuga imasu
@@ -1334,7 +1334,7 @@ Is it enjoyable work?|tanoshii shigoto desuka
 Yeah, the president is nice. My colleagues are nice people, too.|un shachouwa yasashii. douryoumo yasashii hitotachi desu
 That sounds nice. I'm an attorney, and our president is really mean. The work is difficult, too. But the pay is good.|ii desune. watashiwa bengoshi desu kedo shachouwa totemo kibishii desu. shigotomo muzukashii. demo kyuuryouga ii
 How long have you worked there?|itsu kara sokode hataraite imasuka
-From last summer. How long have you worked at the software company?|kyonenno natsu kara desu. Marikosanwa itsu kara sofutono kaishade hataraite imasuka
+From last summer. How long have you worked at the software company? (to Mariko)|kyonenno natsu kara desu. Marikosan itsu kara sofutono kaishade hataraite imasuka
 From February of this year. Hey, shall we get some lunch?|kotoshino nigatsu kara desu. ne hirugohanwo tabemashouka
 Sounds good|ii desune
 child|ko

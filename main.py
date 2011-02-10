@@ -191,10 +191,10 @@ class Question(object):
     @property
     def db_format(self):
         """When saving the data in the txt file"""
-        text = ""
+        text = "%d|" % self.index
         if self.success - self.failure > 3:
             text += "#"
-        text += "%d|%s|%s|%d|%d\n" % (self.index, self.question, self.answer,
+        text += "%s|%s|%d|%d\n" % (self.question, self.answer,
                 self.success, self.failure)
         return text
 
@@ -228,12 +228,13 @@ class Question(object):
 
 class Q_Japanese(Question):
     """Japanese question with some special verifications"""
-    l_prefix = ["watashiwa", "anatawa", "korewa"]
+    l_prefix = ["watashiwa", "anatawa", "korewa", "sorewa"]
     l_suffix = ["desu", ]
     l_replace = {
         "arimasen": "nai",
         "seito": "gakusei",
         "ne": "yo",
+        "un": "ee",
     }
 
     def __init__(self, *args):
@@ -247,6 +248,9 @@ class Q_Japanese(Question):
                 L_SUFFIX(answer, self.l_suffix):
             """Allow to validate a sentence if the prefix is not mandatory"""
             answer = "@%s" % self.answer
+        #print [answer.replace(key, self.l_replace[key]) for key
+              #in self.l_replace]
+            #answer = "@%s" % self.answer
         return super(Q_Japanese, self).verify(answer)
 
 
