@@ -200,6 +200,8 @@ class Question(object):
 
     def verify(self, answer):
         """Verify if the answer is correct"""
+        # first, let's remove the trailing spaces
+        answer = answer.strip()
         if answer == "#":
             """ If I know the question/answer, don't bother and remove it
             now from the vocabulary"""
@@ -252,6 +254,16 @@ class Q_Japanese(Question):
               #in self.l_replace]
             #answer = "@%s" % self.answer
         return super(Q_Japanese, self).verify(answer)
+
+    @classmethod
+    def _stats(cls):
+      #print "bob"
+      #return super(Q_Japanese, cls)._stats()
+      stats = _("Hint:\n\t- (*2): polite form + -te form"\
+                   "\n\t- (#2): infinitive + -te form\n\n", "cyan")
+      stats += super(Q_Japanese, cls)._stats()
+      return stats
+
 
 
 def available_lang(l_files):

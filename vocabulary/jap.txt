@@ -1285,10 +1285,10 @@ Let's take the 6:30 train.|rokuji sanjuppunno denshade ikimashou
 I was drunk yesterday|kinou osake nomimashita
 to remember|oboemasu
 I want to say|iitai
-Do you always wake up in the morning?|asawa itsumo nanji ni okimasuka
+Do you always wake up in the morning?|asawa itsumo nanjini okimasuka
 It is different|chigau
 same|issho
-congratulations|omedetougozaimasu
+congratulations|omedetou gozaimasu
 work (the concept)|shigoto
 work (the place)|shigotoba
 part-time job|arubaito
@@ -1328,7 +1328,7 @@ Mariko is waiting for the train|Marikosanwa denshawo matte imasu
 John waited for the phone call.|Jonsanwa denwawo machimashita
 What are you waiting for?|naniwo matte imasuka
 Miss Suzuki! Please wait a moment!|Suzukisan chotto matte kudasai
-Mariko, where do you work?|Marikosanwa dokode hataraite imasuka
+Mariko, where do you work?|Marikosan dokode hataraite imasuka
 I work at a software company in Tokyo.|toukyouno sofutono kaishade hataraite imasu
 Is it enjoyable work?|tanoshii shigoto desuka
 Yeah, the president is nice. My colleagues are nice people, too.|un shachouwa yasashii. douryoumo yasashii hitotachi desu
