@@ -614,7 +614,7 @@ chicken|chikin
 in front of the teacher|senseino soto
 bath-room|ofuroba
 bus stop|basu tei
-to know|shiteimasu
+to know|shirimasu
 grandmother|obaasan
 ear|mimi
 nectarine|mikan
@@ -1307,7 +1307,7 @@ shopkeeper|tenin
 sofware|sofuto
 programmer|puroguramaa
 I work at a bank|ginkoude hataraite imasu
-Mr. Suzuki works at a college|suzukisanwa daigakude hataraite imasu
+Mr. Suzuki works at a college|Suzukisanwa daigakude hataraite imasu
 Mariko works at a bakery.|Marikosanwa panyade hataraite imasu
 John works at a bookstore.|Jonsanwa honyade hataraite imasu
 Mariko is a florist.|Marikosanwa hanayasan desu
@@ -1340,3 +1340,188 @@ Sounds good|ii desune
 child|ko
 tongue|shita
 store suffix|ya
+The plane flew high|hikoukiwa takaku tobimashita
+John practiced piano well|Jonsanwa pianowo yoku renshuu shimashita
+I don't understand well|yoku wakarimasen
+I go to America often|amerikani yoku ikimasu
+I read the newspaper often|yoku shinbunwo yomimasu
+I don't watch TV often|terebiwo yoku mimasen
+This udon is incredibly delicious|kono udonwa sugoku oishii
+That building is incredibly tall, isn't it?|sono biruwa sugoku takai desune
+building|biru
+John is incredibly strong|Jonsanwa sugoku tsuyoi
+The weather is incredibly good, isn't it?|otenkiwa sugoku ii desune
+real|honto
+certain|tashika
+definite|zettai
+true / actual|jitsu
+actual|jissai
+Is that really so?|hontoni sou desuka
+Certainly, she likes books|tashikani honga suki desu
+I definitely want to go|zettaini ikimasu
+He is truly an amazing person, isn't he|jitsuni sugoi hito desune
+He actually ate a dog.|jissaini inuwo tabemashita
+I was really at school.|hontoni gakkouni imashita
+I really like you|kimiga hontoni suki desuyo
+kid|kimi
+It is definitely not so|zettaini souja nai
+I will definitely not eat sushi|zettaini sushiwo tabemasen
+to get up|okimasu
+I woke up early|hayaku okimashita
+interesting|omoshiroi
+new|atarashii
+light|karui
+old|furui
+quiet|shizuka
+a quiet room|shizukana heya
+convenient|benri
+a convenient place|benrina tokoro
+five months|gokagetsu
+You're this bad!|warui kodane
+It's great|erai desu
+still looking|mada sagashite imasu
+animal|doubutsu
+a set new|teishoku
+What about drink|onomimonowa
+Certainly sir|kashikomarimashita
+Please|onegai shimasu
+Welcome. Can I help you?|irasshaimase
+all together|zenbude
+camera film|firumu
+fan|sensu
+japanese door|ningyou
+paper lantern|chouchin
+Please shop here again|mata okoshi kudasai
+green tea|ocha
+We have also|iroiro arimasuyo
+a bit|chotto
+a lot / very much|zuibun
+Please show me|misete kudasai
+sweets and cakes|okashi
+What? wooow!|aa are
+It's not possible to do|dekinakute
+A little|sukoshi
+Long time no see|hisashi buri desune
+I want to read|yomitai
+I want to read the newspaper|shinbunwo yomitai
+I want to go to the park|kouenni ikitai
+I want to go to the park and read the newspaper|kouenni itte shinbunwo yomitai
+Do you want to go to Japan?|nihonni ikitai
+Do you want to see a movie?|eigawo mitai
+I wanted to read|yomitakatta
+I don't want to talk|hanashitakunai
+I didn't want to eat|tabetakunakatta
+I don't want to go to work|shigotoni ikitakunai
+I didn't want to drink beer.|biiruwo nomitakunakatta
+I wanted to speak in Japanese|nihongode hanashitakatta
+I want to eat sushi tomorrow|ashita sushiwo tabetai desu
+Where do you want to go?|dokoni ikitai
+What do you want to eat?|naniwo tabetai
+What do you want to do?|naniwo shitai
+I could go for some cold beer|tsumetai biiruga nomitai
+What do you want to do on Saturday? Do you want to go for a drive?|doyoubini naniwo shitai. doraibuni ikitai
+A drive sounds nice. Where shall we go?|doraibuga ii desune. dokoni ikimashouka
+I know a nice place. It's in the countryside.|ii tokorowo shite imasuyo. inakani arimasu
+Nice. What shall we eat in the afternoon?|iine. hiru naniwo tabemashouka
+Do you want to eat udon? There's a delicious udon shop|udonwo tabetai. oishii udonno misega arimasu
+I don't want to eat udon, but is there a ramen shop?|udonwa tabetakunai kedo ramenno misewa arimasuka
+There is. Okay, we'll take a drive and eat ramen|arimasuyo. ja doraibuni itte ramenwo tabemashou
+A quelle heure ça ferme?|nanjini shimarimasuka
+A quelle heure est l'avion?|hikoukiwa nanji desuka
+A quelle heure est ton train?|anatano denshawa nanji desuka
+A quelle heure est-elle rentrée à la maison?|kanojowa nanjini kaerimashitaka
+A quelle heure le diner est-il servi?|yuushokuwa nanji desuka
+A quelle heure ouvre le magasin?|nanjini misewa akimasuka
+A quelle heure part le train?|nanjini denshawa demasuka
+A quelle heure viendront-ils?|nanjini karerawa kimasuka
+aimes-tu chanter?|anatawa utaunoga suki desuka
+aimes-tu conduire?|anatawa unten surunoga suki desuka
+aimes-tu danser?|anatawa odorunoga suki desuka
+aimes-tu la musique?|anatawa ongakuga suki desuka
+aimes-tu le café?|anatawa kouhiiga suki desuka
+aimes-tu le jus d'orange?|anatawa orenji juusuga suki desuka
+allez-y!|douzo
+Après-demain elle a un rendez-vous|asatte kanojowa yakusokuga arimasu
+après vous!|douzo
+au revoir, excusez-moi de partir avant vous|osakini shitsurei shimasu
+au revoir, reposez vous bien|otsukaresama deshita
+aujourd'hui elle fait des courses à Paris|kyou kanojowa paride kaimonowo shimasu
+aujourd'hui j'ai un rendez-vous|kyou watashiwa yakusokuga arimasu
+aujourd'hui je reste à la maison|kyou watashiwa uchini imasu
+avant-hier je suis arrivé à Tokyo|ototoi watashiwa toukyouni tusukimashita
+C'est calme|shizuka desu
+c'est cher|takai desu
+c'est compliqué|fukuzatsu desu
+c'est dangereux|kiken desu
+c'est difficile|muzukashii desu
+c'est dommage|zannen desu
+c'est facile|kantan desu
+c'est froid|tsumetai desu
+c'est important|juuyou desu
+c'est lourd|omoi desu
+c'est marie|marisan desu
+c'est moi|watashi desu
+c'est petit|chiisai desu
+c'est trop cher|taka sugimasu
+c'est trop compliqué|fuzukatsu sugimasu
+c'est trop dangeureux|kiken sugimasu
+c'est trop difficile|muzukashi sugimasu
+c'est trop facile|kantan sugimasu
+c'est trop froid|tsumeta sugimasu
+c'est trop important|juuyou sugimasu
+c'est trop petit|chiisa sugimasu
+c'est trop chaud|atsu sugimasu
+c'est trop ennuyeux|taikutsu sugimasu
+c'est trop grand|ooki sugimasu
+c'est trop long|naga sugimasu
+c'est trop tôt|haya sugimasu
+c'est vraiment facile|kantan desune
+Ce ne sont pas des médecins|ishaja arimasen
+ce ne sont pas des voitures|kurumaja arimasen
+ce sont des médecins|isha desu
+cette semaine monsieur Tanaka est à la maison|konshuu Tanakasanwa uchini imasu
+Comment fait-on pour préparer des nouilles instantannées?|insutanto ramenwa douyatte tsukurun desuka
+Connaissez-vous la cause de l'accident?|anatawa jikono geninwo shitte imasuka
+Connaissez-vous un hôtel calme?|anatawa shizukana hoteruwo shitte imasuka
+De quel pays êtes-vous originaire?|okuniwa dochira desuka
+demain elle vient chez moi|ashita kanojowa watshino uchini kimasu
+demain ils arrivent à Tokyo|ashita karerawa toukyouni tsukimasu
+demain nous partons au Japon|ashita watashitachiwa nihonni dekakemasu
+dépêchons-nous!|isogimashou
+écouter (#2)|kiku kiite
+aller (#2)|iku itte
+enlever (#2)|nugu nuide
+parler (#2)|hanasu hanashite
+lire (#2)|yomu yonde
+mourir (#2)|shinu shinde
+s'amuser (#2)|asobu asonde
+acheter (#2)|kau katte
+attendre (#2)|matsu matte
+prendre (#2)|toru totte
+rentrer (#2)|kaeru kaette
+ouvrir (#2)|akeru akete
+enlever (2)(#2)|shimeru shimete
+regarder (#2)|miru mite
+se lever (#2)|okiru okite
+faire (#2)|suru shite
+venir (#2)|kuru kite
+Je mange.|watashiwa tabete iru
+Je mangeais.|watashiwa tabete ita
+Je ne mange pas.|tabete inai
+Je ne mangeais pas.|tabete inakatta
+écrire (#2)|kaku katte
+boire|nomu
+manger|taberu
+voir|miru
+tomber|furu
+Elle semble être seule|kanojowa sabishisou
+seul|sabishii
+Cette ville semble paisible|kono machiwa heiwasou
+ville|machi
+paisible|heiwana
+Il semble qu'il ne pleut pas.|amega furanasasou
+Il est allé au lit sans manger.|karewa tabezuni neta
+Il est allé au lit sans manger (il n'a pas mangé et s'est couché)|karewa tabenaide neta
+Ne fumez pas s'il vous plait|tabakowo suwanaide kudasai
+C'est le train que je prends tous les jours|korewa watashiga mainichi noru densha desu
+C'est le train que je prends tous les jours pour aller travailler|korewa watashiga shigotoni iku tameni mainichi noru densha desu

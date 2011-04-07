@@ -100,7 +100,7 @@ class Vocabulary:
         if "False, the answer was" in response:
             # We ask the user to write down the answer 3 times
             print _("\tWrite the answer 3 times :", "yellow")
-            [raw_input(_("\t\t%d: " % i, "yellow")) for i in range(3)]
+            [raw_input(_("\t\t%d: " % i, "yellow")) for i in range(1,4)]
 
     def signal_handler(self, signal, frame):
         """Save the data in the file before exiting the program"""
@@ -180,9 +180,10 @@ class Question(object):
             self.__class__.total_questions += 1     # total question
 
     @classmethod
-    def _stats(cls):
+    def _stats(cls, lang_message=""):
         """Class function to get some stats on its instances"""
-        return " - %s bad answers\n" % _(len(cls.questions_failed), "red") +\
+        return lang_message +\
+               " - %s bad answers\n" % _(len(cls.questions_failed), "red") +\
                " - %s correct answers\n" % _(cls.total_success, "green") +\
                " - %s archived \n" % _(cls.total_commented, "yellow") +\
                " - %s unanswered questions\n" % cls.total_unanswered +\
@@ -230,7 +231,7 @@ class Question(object):
 
 class Q_Japanese(Question):
     """Japanese question with some special verifications"""
-    l_prefix = ["watashiwa", "anatawa", "korewa", "sorewa"]
+    l_prefix = ["watashiwa", "anatawa", "karewa", "korewa", "sorewa"]
     l_suffix = ["desu", ]
     l_replace = {
         "arimasen": "nai",
@@ -257,12 +258,9 @@ class Q_Japanese(Question):
 
     @classmethod
     def _stats(cls):
-      #print "bob"
-      #return super(Q_Japanese, cls)._stats()
       stats = _("Hint:\n\t- (*2): polite form + -te form"\
                    "\n\t- (#2): infinitive + -te form\n\n", "cyan")
-      stats += super(Q_Japanese, cls)._stats()
-      return stats
+      return super(Q_Japanese, cls)._stats(stats)
 
 
 
