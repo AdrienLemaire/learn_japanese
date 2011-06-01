@@ -644,7 +644,7 @@ the second of the month|futsuka
 one year old|issai
 Mariko will go next year|Marikosanwa rainen ikimasu
 watermelon|suika
-red grape|pudou
+red grape|budou
 a walk|sanpo
 to school|gakkouni
 nurse|kangofu
@@ -702,7 +702,7 @@ i saw it last week|senshuu mimashita
 finger|yubi
 person who works at store|yasan
 where did the students go?|gakuseitachiwa dokoni ikimashitaka
-dirty|itanai
+dirty|kitanai
 Really? How much is this?|sou desuka. korewa ikura desuka
 we|watashitachi
 i didn't read last year|kyonen yomimasen deshita
@@ -1484,7 +1484,7 @@ Comment fait-on pour préparer des nouilles instantannées?|insutanto ramenwa do
 Connaissez-vous la cause de l'accident?|anatawa jikono geninwo shitte imasuka
 Connaissez-vous un hôtel calme?|anatawa shizukana hoteruwo shitte imasuka
 De quel pays êtes-vous originaire?|okuniwa dochira desuka
-demain elle vient chez moi|ashita kanojowa watshino uchini kimasu
+demain elle vient chez moi|ashita kanojowa watashino uchini kimasu
 demain ils arrivent à Tokyo|ashita karerawa toukyouni tsukimasu
 demain nous partons au Japon|ashita watashitachiwa nihonni dekakemasu
 dépêchons-nous!|isogimashou
@@ -1525,3 +1525,45 @@ Il est allé au lit sans manger (il n'a pas mangé et s'est couché)|karewa tabe
 Ne fumez pas s'il vous plait|tabakowo suwanaide kudasai
 C'est le train que je prends tous les jours|korewa watashiga mainichi noru densha desu
 C'est le train que je prends tous les jours pour aller travailler|korewa watashiga shigotoni iku tameni mainichi noru densha desu
+farm|hatake
+to decide (#2)|kimeru kimete
+to choose (#2)|erabu erande
+to search (#2)|sagasu sagashite
+I'm hungry|onaka suita
+One plate|hitosara
+2 plates|futasara
+3 plates|sansara
+slow|yukuri
+ice|koori
+mizu|yara
+not deep|korui
+another|oka
+2 hippon|ichizen
+don't worry|kenishinaide
+don't mind|kenishinaide
+glasses|megane
+scary|kowai
+pattering, clattering|parapara
+jitensha|chari
+ashtray|haizara
+poor|kawaisou
+You liar!|usotsuki
+Really?|honto
+All right?|daijoubu
+I do/I want/Please/Don't|shimasu shitai shite shinaide
+to live|sumu
+extracurricular activities|bukatsu
+salt|shio
+sugar|sato
+not good smell|kusai
+tired|tsukareru
+kega|injury
+more|motto
+up to you|makaseru
+I don't want to bother you|watashiwa anatawo komara shitakunai
+annoy|komara
+task/trial|kadai
+always|jouji
+to update|koushin suru
+more than one piece|ichimai amari
+May I help?|tasuketemo yoi desuka
